@@ -1,0 +1,30 @@
+:root {
+	--theme-color-1: #000;
+	--theme-color-2: #fff;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	display: flex;
+	background-color: var(--theme-color-1);
+	color: var(--theme-color-2);
+	top: 0;
+	position: sticky;
+	padding: 10px;
+}
+
+main {
+	padding: 0 15px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: var(--theme-color-1);
+	color: var(--theme-color-2);
+	font-weight: bold;
+}
