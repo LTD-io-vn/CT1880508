@@ -1,20 +1,47 @@
 :root {
-	--theme-color-1: #000;
-	--theme-color-2: #fff;
+	--theme-color-1: rgb(0, 0, 0);
+	--theme-color-2: rgb(50, 50, 50);
+	--theme-color-3: rgb(4, 203, 164);
+	--theme-color-4: rgb(255, 255, 255);
 }
 
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
+	background-color: var(--theme-color-1);
+	color: var(--theme-color-4);
 }
 
 header {
-	display: flex;
 	background-color: var(--theme-color-1);
-	color: var(--theme-color-2);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	top: 0;
 	position: sticky;
-	padding: 10px;
+	padding: 15px;
+}
+
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+header li {
+	display: inline-block;
+	margin: 0 15px;
+}
+
+header a {
+	text-decoration: none;
+	color: var(--theme-color-4);
+	font-weight: bold;
+	transition: color 0.2s ease;
+}
+
+header a:hover {
+	color: var(--theme-color-3);
 }
 
 main {
@@ -24,7 +51,51 @@ main {
 footer {
 	display: flex;
 	justify-content: center;
-	background-color: var(--theme-color-1);
-	color: var(--theme-color-2);
+	background-color: var(--theme-color-2);
+	color: var(--theme-color-4);
 	font-weight: bold;
+}
+
+#nav-toggle {
+	display: none;
+	height: 48px;
+	width: 48px;
+	font-size: 30px;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+	color: var(--theme-color-4);
+	transition: background-color 0.2s ease;
+}
+
+#nav-toggle:hover {
+	background-color: var(--theme-color-2);
+}
+
+@media (max-width: 1000px) {
+	header {
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 10px;
+	}
+
+	header nav {
+		position: fixed;
+		background-color: var(--theme-color-2);
+		top: 0;
+		left: -280px; /* -width - 2padding */
+		height: 100%;
+		padding: 15px;
+		width: 250px;
+		transition: left 0.3s ease;
+	}
+
+	header li {
+		display: block;
+		margin: 15px 0;
+	}
+
+	#nav-toggle {
+		display: block;
+	}
 }

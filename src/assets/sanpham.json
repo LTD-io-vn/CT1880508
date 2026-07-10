@@ -1,1 +1,9 @@
-[]
+[
+	{
+		"name": "Sản phẩm mẫu",
+		"description": "Mô tả sản phẩm mẫu",
+		"price": 100000,
+		"image": "assets/imgs/sanpham/sanpham1.jpg",
+		"category": "DiaNhac"
+	}
+]
