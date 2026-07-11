@@ -23,7 +23,7 @@ header {
 	top: 0;
 	position: sticky;
 	padding: 15px 15px 15px 30px;
-	box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 header ul {
@@ -99,7 +99,7 @@ footer {
 		padding: 75px 25px;
 		width: 250px;
 		transition: left 0.3s ease;
-		box-shadow: 7px 0px 10px 0 rgba(0, 0, 0, 0.25);
+		box-shadow: 4px 0px 5px 0 rgba(0, 0, 0, 0.25);
 	}
 
 	#nav-bar i {
