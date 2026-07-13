@@ -1,9 +1,282 @@
 [
 	{
-		"name": "Sản phẩm mẫu",
-		"description": "Mô tả sản phẩm mẫu",
-		"price": 100000,
-		"image": "assets/imgs/sanpham/sanpham1.jpg",
-		"category": "DiaNhac"
+		"name": "Sơn Tùng M-TP - Chúng Ta Của Tương Lai",
+		"artist": "Sơn Tùng M-TP",
+		"description": "Đĩa than phiên bản sưu tầm của ca khúc Chúng Ta Của Tương Lai với chất lượng âm thanh cao.",
+		"price": 1250000,
+		"image": "/assets/imgs/sanpham/vinyl/chung-ta-cua-tuong-lai.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Sơn Tùng M-TP - Đừng Làm Trái Tim Anh Đau",
+		"artist": "Sơn Tùng M-TP",
+		"description": "Phiên bản vinyl của bản hit Đừng Làm Trái Tim Anh Đau dành cho người hâm mộ.",
+		"price": 1190000,
+		"image": "/assets/imgs/sanpham/vinyl/dung-lam-trai-tim-anh-dau.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Sơn Tùng M-TP - Hãy Trao Cho Anh",
+		"artist": "Sơn Tùng M-TP",
+		"description": "Đĩa than chất lượng cao với ca khúc nổi tiếng Hãy Trao Cho Anh.",
+		"price": 1290000,
+		"image": "/assets/imgs/sanpham/vinyl/hay-trao-cho-anh.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Sơn Tùng M-TP - Chạy Ngay Đi",
+		"artist": "Sơn Tùng M-TP",
+		"description": "Phiên bản vinyl giới hạn của Chạy Ngay Đi với thiết kế bìa độc quyền.",
+		"price": 1150000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Sơn Tùng M-TP - Lạc Trôi",
+		"artist": "Sơn Tùng M-TP",
+		"description": "Đĩa than Lạc Trôi mang đến trải nghiệm âm thanh chân thực.",
+		"price": 1220000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Tyler, The Creator - Chromakopia",
+		"artist": "Tyler, The Creator",
+		"description": "Album phòng thu thứ tám của Tyler, The Creator phát hành năm 2024.",
+		"price": 1300000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Taylor Swift - 1989 (Taylor's Version)",
+		"artist": "Taylor Swift",
+		"description": "Phiên bản tái thu âm của album pop nổi tiếng 1989.",
+		"price": 1450000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Taylor Swift - Midnights",
+		"artist": "Taylor Swift",
+		"description": "Album Midnights với những bản pop hiện đại và sâu lắng.",
+		"price": 1380000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Adele - 30",
+		"artist": "Adele",
+		"description": "Album 30 của Adele với chất giọng đầy cảm xúc.",
+		"price": 1350000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Bruno Mars - 24K Magic",
+		"artist": "Bruno Mars",
+		"description": "Album funk-pop nổi tiếng đạt nhiều giải thưởng Grammy.",
+		"price": 1280000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Daft Punk - Random Access Memories",
+		"artist": "Daft Punk",
+		"description": "Album kinh điển với ca khúc Get Lucky.",
+		"price": 1500000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Michael Jackson - Thriller",
+		"artist": "Michael Jackson",
+		"description": "Một trong những album bán chạy nhất mọi thời đại.",
+		"price": 1550000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Queen - Greatest Hits",
+		"artist": "Queen",
+		"description": "Tuyển tập những ca khúc nổi tiếng nhất của Queen.",
+		"price": 1480000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Pink Floyd - The Dark Side of the Moon",
+		"artist": "Pink Floyd",
+		"description": "Album rock huyền thoại với chất lượng thu âm xuất sắc.",
+		"price": 1600000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "The Beatles - Abbey Road",
+		"artist": "The Beatles",
+		"description": "Album cuối cùng được ban nhạc thu âm cùng nhau.",
+		"price": 1580000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Nirvana - Nevermind",
+		"artist": "Nirvana",
+		"description": "Album grunge kinh điển của thập niên 90.",
+		"price": 1420000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Coldplay - Parachutes",
+		"artist": "Coldplay",
+		"description": "Album đầu tay với bản hit Yellow.",
+		"price": 1330000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Ed Sheeran - Divide",
+		"artist": "Ed Sheeran",
+		"description": "Album Divide với nhiều ca khúc đình đám.",
+		"price": 1290000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "The Weeknd - After Hours",
+		"artist": "The Weeknd",
+		"description": "Album synth-pop nổi bật với Blinding Lights.",
+		"price": 1370000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Billie Eilish - Happier Than Ever",
+		"artist": "Billie Eilish",
+		"description": "Album thứ hai của Billie Eilish với nhiều bản hit.",
+		"price": 1390000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Lana Del Rey - Born to Die",
+		"artist": "Lana Del Rey",
+		"description": "Album mang phong cách dream pop đặc trưng.",
+		"price": 1410000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Arctic Monkeys - AM",
+		"artist": "Arctic Monkeys",
+		"description": "Album rock hiện đại được yêu thích trên toàn thế giới.",
+		"price": 1360000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Imagine Dragons - Evolve",
+		"artist": "Imagine Dragons",
+		"description": "Album với các ca khúc Believer và Thunder.",
+		"price": 1320000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Linkin Park - Hybrid Theory",
+		"artist": "Linkin Park",
+		"description": "Album đầu tay mang tính biểu tượng của Linkin Park.",
+		"price": 1460000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Eagles - Hotel California",
+		"artist": "Eagles",
+		"description": "Album rock cổ điển với ca khúc Hotel California bất hủ.",
+		"price": 1520000,
+		"image": "/assets/imgs/vinyl.png",
+		"category": "Vinyl"
+	},
+	{
+		"name": "Audio-Technica AT-LP60X",
+		"brand": "Audio-Technica",
+		"description": "Mâm đĩa than truyền động dây đai hoàn toàn tự động, tích hợp preamp phono, phù hợp cho người mới bắt đầu.",
+		"price": 4900000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Audio-Technica AT-LPW30TK",
+		"brand": "Audio-Technica",
+		"description": "Mâm đĩa than thủ công với mặt gỗ MDF, truyền động dây đai và khả năng nâng cấp kim đọc.",
+		"price": 7900000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Sony PS-LX310BT",
+		"brand": "Sony",
+		"description": "Mâm đĩa than tự động hỗ trợ kết nối Bluetooth, dễ dàng kết nối với loa và tai nghe không dây.",
+		"price": 7200000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Pro-Ject Debut Carbon EVO",
+		"brand": "Pro-Ject",
+		"description": "Mâm đĩa than cao cấp với cần carbon, chống rung hiệu quả và chất lượng âm thanh vượt trội.",
+		"price": 16500000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Rega Planar 1",
+		"brand": "Rega",
+		"description": "Mâm đĩa than thủ công nổi tiếng với thiết kế tối giản và khả năng tái tạo âm thanh trung thực.",
+		"price": 11900000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Denon DP-300F",
+		"brand": "Denon",
+		"description": "Mâm đĩa than tự động với preamp tích hợp, phù hợp cho hệ thống âm thanh gia đình.",
+		"price": 9800000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Fluance RT82",
+		"brand": "Fluance",
+		"description": "Mâm đĩa than truyền động dây đai với cảm biến tốc độ quang học cho độ chính xác cao.",
+		"price": 9300000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Technics SL-1200MK7",
+		"brand": "Technics",
+		"description": "Mâm đĩa than truyền động trực tiếp chuyên nghiệp, được các DJ trên toàn thế giới tin dùng.",
+		"price": 28900000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Pioneer DJ PLX-500",
+		"brand": "Pioneer DJ",
+		"description": "Mâm đĩa than direct-drive dành cho DJ và người yêu nhạc với khả năng ghi âm qua USB.",
+		"price": 9800000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
+	},
+	{
+		"name": "Victrola Eastwood",
+		"brand": "Victrola",
+		"description": "Mâm đĩa than phong cách cổ điển tích hợp Bluetooth và loa, thích hợp cho không gian gia đình.",
+		"price": 4200000,
+		"image": "/assets/imgs/turntable.png",
+		"category": "Turntable"
 	}
 ]
