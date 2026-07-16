@@ -1,282 +1,402 @@
-[
-	{
+{
+	"SP0000": {
 		"name": "Sơn Tùng M-TP - Chúng Ta Của Tương Lai",
 		"origin": "Sơn Tùng M-TP",
 		"description": "Đĩa than phiên bản sưu tầm của ca khúc Chúng Ta Của Tương Lai với chất lượng âm thanh cao.",
 		"price": 1250000,
-		"image": "/assets/imgs/sanpham/vinyl/chung-ta-cua-tuong-lai.png",
+		"image": "/assets/imgs/sanpham/vinyl/chung-ta-cua-tuong-lai.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0001": {
 		"name": "Sơn Tùng M-TP - Đừng Làm Trái Tim Anh Đau",
 		"origin": "Sơn Tùng M-TP",
 		"description": "Phiên bản vinyl của bản hit Đừng Làm Trái Tim Anh Đau dành cho người hâm mộ.",
 		"price": 1190000,
-		"image": "/assets/imgs/sanpham/vinyl/dung-lam-trai-tim-anh-dau.png",
+		"image": "/assets/imgs/sanpham/vinyl/dung-lam-trai-tim-anh-dau.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0002": {
 		"name": "Sơn Tùng M-TP - Hãy Trao Cho Anh",
 		"origin": "Sơn Tùng M-TP",
 		"description": "Đĩa than chất lượng cao với ca khúc nổi tiếng Hãy Trao Cho Anh.",
 		"price": 1290000,
-		"image": "/assets/imgs/sanpham/vinyl/hay-trao-cho-anh.png",
+		"image": "/assets/imgs/sanpham/vinyl/hay-trao-cho-anh.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0003": {
 		"name": "Sơn Tùng M-TP - Chạy Ngay Đi",
 		"origin": "Sơn Tùng M-TP",
 		"description": "Phiên bản vinyl giới hạn của Chạy Ngay Đi với thiết kế bìa độc quyền.",
 		"price": 1150000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0004": {
 		"name": "Sơn Tùng M-TP - Lạc Trôi",
 		"origin": "Sơn Tùng M-TP",
 		"description": "Đĩa than Lạc Trôi mang đến trải nghiệm âm thanh chân thực.",
 		"price": 1220000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0005": {
 		"name": "Tyler, The Creator - Chromakopia",
 		"origin": "Tyler, The Creator",
 		"description": "Album phòng thu thứ tám của Tyler, The Creator phát hành năm 2024.",
 		"price": 1300000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0006": {
 		"name": "Taylor Swift - 1989 (Taylor's Version)",
 		"origin": "Taylor Swift",
 		"description": "Phiên bản tái thu âm của album pop nổi tiếng 1989.",
 		"price": 1450000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0007": {
 		"name": "Taylor Swift - Midnights",
 		"origin": "Taylor Swift",
 		"description": "Album Midnights với những bản pop hiện đại và sâu lắng.",
 		"price": 1380000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0008": {
 		"name": "Adele - 30",
 		"origin": "Adele",
 		"description": "Album 30 của Adele với chất giọng đầy cảm xúc.",
 		"price": 1350000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0009": {
 		"name": "Bruno Mars - 24K Magic",
 		"origin": "Bruno Mars",
 		"description": "Album funk-pop nổi tiếng đạt nhiều giải thưởng Grammy.",
 		"price": 1280000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0010": {
 		"name": "Daft Punk - Random Access Memories",
 		"origin": "Daft Punk",
 		"description": "Album kinh điển với ca khúc Get Lucky.",
 		"price": 1500000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0011": {
 		"name": "Michael Jackson - Thriller",
 		"origin": "Michael Jackson",
 		"description": "Một trong những album bán chạy nhất mọi thời đại.",
 		"price": 1550000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0012": {
 		"name": "Queen - Greatest Hits",
 		"origin": "Queen",
 		"description": "Tuyển tập những ca khúc nổi tiếng nhất của Queen.",
 		"price": 1480000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0013": {
 		"name": "Pink Floyd - The Dark Side of the Moon",
 		"origin": "Pink Floyd",
 		"description": "Album rock huyền thoại với chất lượng thu âm xuất sắc.",
 		"price": 1600000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0014": {
 		"name": "The Beatles - Abbey Road",
 		"origin": "The Beatles",
 		"description": "Album cuối cùng được ban nhạc thu âm cùng nhau.",
 		"price": 1580000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0015": {
 		"name": "Nirvana - Nevermind",
 		"origin": "Nirvana",
 		"description": "Album grunge kinh điển của thập niên 90.",
 		"price": 1420000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0016": {
 		"name": "Coldplay - Parachutes",
 		"origin": "Coldplay",
 		"description": "Album đầu tay với bản hit Yellow.",
 		"price": 1330000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0017": {
 		"name": "Ed Sheeran - Divide",
 		"origin": "Ed Sheeran",
 		"description": "Album Divide với nhiều ca khúc đình đám.",
 		"price": 1290000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0018": {
 		"name": "The Weeknd - After Hours",
 		"origin": "The Weeknd",
 		"description": "Album synth-pop nổi bật với Blinding Lights.",
 		"price": 1370000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0019": {
 		"name": "Billie Eilish - Happier Than Ever",
 		"origin": "Billie Eilish",
 		"description": "Album thứ hai của Billie Eilish với nhiều bản hit.",
 		"price": 1390000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0020": {
 		"name": "Lana Del Rey - Born to Die",
 		"origin": "Lana Del Rey",
 		"description": "Album mang phong cách dream pop đặc trưng.",
 		"price": 1410000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0021": {
 		"name": "Arctic Monkeys - AM",
 		"origin": "Arctic Monkeys",
 		"description": "Album rock hiện đại được yêu thích trên toàn thế giới.",
 		"price": 1360000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0022": {
 		"name": "Imagine Dragons - Evolve",
 		"origin": "Imagine Dragons",
 		"description": "Album với các ca khúc Believer và Thunder.",
 		"price": 1320000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0023": {
 		"name": "Linkin Park - Hybrid Theory",
 		"origin": "Linkin Park",
 		"description": "Album đầu tay mang tính biểu tượng của Linkin Park.",
 		"price": 1460000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0024": {
 		"name": "Eagles - Hotel California",
 		"origin": "Eagles",
 		"description": "Album rock cổ điển với ca khúc Hotel California bất hủ.",
 		"price": 1520000,
-		"image": "/assets/imgs/vinyl.png",
+		"image": "/assets/imgs/vinyl.jpg",
 		"type": "Vinyl"
 	},
-	{
+	"SP0025": {
 		"name": "Audio-Technica AT-LP60X",
 		"origin": "Audio-Technica",
 		"description": "Mâm đĩa than truyền động dây đai hoàn toàn tự động, tích hợp preamp phono, phù hợp cho người mới bắt đầu.",
 		"price": 4900000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0026": {
 		"name": "Audio-Technica AT-LPW30TK",
 		"origin": "Audio-Technica",
 		"description": "Mâm đĩa than thủ công với mặt gỗ MDF, truyền động dây đai và khả năng nâng cấp kim đọc.",
 		"price": 7900000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0027": {
 		"name": "Sony PS-LX310BT",
 		"origin": "Sony",
 		"description": "Mâm đĩa than tự động hỗ trợ kết nối Bluetooth, dễ dàng kết nối với loa và tai nghe không dây.",
 		"price": 7200000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0028": {
 		"name": "Pro-Ject Debut Carbon EVO",
 		"origin": "Pro-Ject",
 		"description": "Mâm đĩa than cao cấp với cần carbon, chống rung hiệu quả và chất lượng âm thanh vượt trội.",
 		"price": 16500000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0029": {
 		"name": "Rega Planar 1",
 		"origin": "Rega",
 		"description": "Mâm đĩa than thủ công nổi tiếng với thiết kế tối giản và khả năng tái tạo âm thanh trung thực.",
 		"price": 11900000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0030": {
 		"name": "Denon DP-300F",
 		"origin": "Denon",
 		"description": "Mâm đĩa than tự động với preamp tích hợp, phù hợp cho hệ thống âm thanh gia đình.",
 		"price": 9800000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0031": {
 		"name": "Fluance RT82",
 		"origin": "Fluance",
 		"description": "Mâm đĩa than truyền động dây đai với cảm biến tốc độ quang học cho độ chính xác cao.",
 		"price": 9300000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0032": {
 		"name": "Technics SL-1200MK7",
 		"origin": "Technics",
 		"description": "Mâm đĩa than truyền động trực tiếp chuyên nghiệp, được các DJ trên toàn thế giới tin dùng.",
 		"price": 28900000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0033": {
 		"name": "Pioneer DJ PLX-500",
 		"origin": "Pioneer DJ",
 		"description": "Mâm đĩa than direct-drive dành cho DJ và người yêu nhạc với khả năng ghi âm qua USB.",
 		"price": 9800000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
 	},
-	{
+	"SP0034": {
 		"name": "Victrola Eastwood",
 		"origin": "Victrola",
 		"description": "Mâm đĩa than phong cách cổ điển tích hợp Bluetooth và loa, thích hợp cho không gian gia đình.",
 		"price": 4200000,
-		"image": "/assets/imgs/turntable.png",
+		"image": "/assets/imgs/turntable.jpg",
 		"type": "Turntable"
+	},
+	"SP0035": {
+		"name": "Edifier R1280DB",
+		"origin": "Edifier",
+		"description": "Loa bookshelf tích hợp Bluetooth với chất âm cân bằng, phù hợp nghe nhạc vinyl và giải trí tại gia.",
+		"price": 2890000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0036": {
+		"name": "Marshall Acton III",
+		"origin": "Marshall",
+		"description": "Loa Bluetooth thiết kế cổ điển với âm thanh mạnh mẽ, thích hợp cho phòng khách hoặc phòng làm việc.",
+		"price": 7490000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0037": {
+		"name": "Audioengine A2+",
+		"origin": "Audioengine",
+		"description": "Loa bookshelf nhỏ gọn hỗ trợ Bluetooth, mang đến âm thanh chi tiết và trung thực.",
+		"price": 6590000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0038": {
+		"name": "Klipsch The Fives",
+		"origin": "Klipsch",
+		"description": "Loa hi-fi cao cấp với kết nối đa dạng và chất âm sống động dành cho người yêu nhạc.",
+		"price": 18900000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0039": {
+		"name": "JBL Authentics 300",
+		"origin": "JBL",
+		"description": "Loa không dây phong cách retro với âm thanh mạnh mẽ và thời lượng pin dài.",
+		"price": 10900000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0040": {
+		"name": "Sony SRS-RA3000",
+		"origin": "Sony",
+		"description": "Loa không dây hỗ trợ âm thanh 360 Reality Audio, mang lại trải nghiệm nghe nhạc sống động.",
+		"price": 6990000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0041": {
+		"name": "Harman Kardon Aura Studio 4",
+		"origin": "Harman Kardon",
+		"description": "Loa Bluetooth thiết kế trong suốt độc đáo, kết hợp âm thanh chất lượng cao và vẻ đẹp hiện đại.",
+		"price": 7990000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0042": {
+		"name": "Bose Home Speaker 500",
+		"origin": "Bose",
+		"description": "Loa thông minh với âm thanh stereo rộng, hỗ trợ điều khiển bằng giọng nói và Bluetooth.",
+		"price": 9990000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0043": {
+		"name": "KEF LSX II",
+		"origin": "KEF",
+		"description": "Cặp loa không dây hi-fi nhỏ gọn với chất âm chi tiết và khả năng kết nối hiện đại.",
+		"price": 29900000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0044": {
+		"name": "Fluance Ai61",
+		"origin": "Fluance",
+		"description": "Loa bookshelf chủ động hỗ trợ Bluetooth aptX HD, lý tưởng để kết hợp cùng mâm đĩa than.",
+		"price": 10990000,
+		"image": "/assets/imgs/speaker.jpg",
+		"type": "Speaker"
+	},
+	"SP0045": {
+		"name": "Yamaha A-S301",
+		"origin": "Yamaha",
+		"description": "Âm ly tích hợp mang đến âm thanh trong trẻo, công suất ổn định, phù hợp với hệ thống nghe nhạc gia đình.",
+		"price": 10990000,
+		"image": "/assets/imgs/amplifier.jpg",
+		"type": "Amplifier"
+	},
+	"SP0046": {
+		"name": "Denon PMA-600NE",
+		"origin": "Denon",
+		"description": "Âm ly stereo tích hợp Bluetooth với chất âm chi tiết, lý tưởng để phối ghép cùng mâm đĩa than.",
+		"price": 12990000,
+		"image": "/assets/imgs/amplifier.jpg",
+		"type": "Amplifier"
+	},
+	"SP0047": {
+		"name": "Marantz PM6007",
+		"origin": "Marantz",
+		"description": "Âm ly hi-fi nổi tiếng với âm thanh ấm áp, hỗ trợ ngõ vào phono dành cho người yêu đĩa than.",
+		"price": 15990000,
+		"image": "/assets/imgs/amplifier.jpg",
+		"type": "Amplifier"
+	},
+	"SP0048": {
+		"name": "Cambridge Audio AXA35",
+		"origin": "Cambridge Audio",
+		"description": "Âm ly tích hợp thiết kế tối giản, tích hợp phono MM, mang lại trải nghiệm nghe nhạc tự nhiên.",
+		"price": 11990000,
+		"image": "/assets/imgs/amplifier.jpg",
+		"type": "Amplifier"
+	},
+	"SP0049": {
+		"name": "Onkyo A-9110",
+		"origin": "Onkyo",
+		"description": "Âm ly stereo hiệu suất cao với âm thanh mạnh mẽ, phù hợp cho hệ thống hi-fi cổ điển.",
+		"price": 9900000,
+		"image": "/assets/imgs/amplifier.jpg",
+		"type": "Amplifier"
 	}
-]
+}
