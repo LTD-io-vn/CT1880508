@@ -168,7 +168,13 @@
 			}
 		}
 
-		searchBox.addEventListener("input", renderProductList);
+		searchBox.addEventListener("keydown", e => {
+			if (e.key == "Enter") {
+				searchBox.blur();
+				renderProductList();
+			}
+		});
+
 		filterSort.addEventListener("change", renderProductList);
 
 		for (const [id, data] of Object.entries(productData)) {
