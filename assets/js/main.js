@@ -481,6 +481,7 @@ function getCartItems() {
 		const data = productData[id];
 
 		items.push({
+			id: id,
 			name: data.name,
 			origin: data.origin,
 			description: data.description,
