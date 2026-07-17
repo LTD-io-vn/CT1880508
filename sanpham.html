@@ -11,7 +11,80 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-	<style></style>
+	<style>
+		main {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.product-search {
+			display: flex;
+			gap: 10px;
+		}
+
+		#product-filter-toggle, #search-box {
+			padding: 10px;
+			border: 1px solid var(--theme-color-3);
+			border-radius: 5px;
+			background-color: transparent;
+		}
+
+		#product-filter-toggle {
+			background-color: var(--theme-color-1);
+			color: var(--theme-color-4);
+			border: none;
+			transition: background-color 0.25s ease,
+				color 0.25s ease,
+				filter 0.25s ease;
+		}
+
+		#product-filter-toggle:hover {
+			filter: brightness(0.9);
+		}
+
+		#product-filter-toggle.active {
+			background-color: var(--theme-color-4);
+			color: var(--theme-color-1);
+		}
+
+		#product-filter-toggle.active:hover {
+			filter: brightness(2);
+		}
+
+		#product-filter-toggle {
+			border: none;
+		}
+
+		#search-box {
+			flex: 1;
+			outline-color: var(--theme-color-4);
+		}
+
+		#product-filter {
+			background-color: var(--theme-color-2);
+			padding: 15px;
+			border-radius: 5px;
+		}
+
+		#product-filter h2 {
+			margin: 0;
+		}
+
+		#product-filter select {
+			width: 100%;
+			border: 10px solid transparent;
+			outline: 1px solid var(--theme-color-3);
+			border-radius: 5px;
+		}
+
+		@media (min-width: 1350px) {
+			main {
+				width: 1000px;
+				margin: auto;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -32,8 +105,32 @@
 	</header>
 
 	<main>
-		<h1>Test</h1>
-		<p>ND</p>
+		<div class="product-search">
+			<button id="product-filter-toggle"><i class="fa-solid fa-filter"></i></button>
+			<input id="search-box" type="text" placeholder="Tìm kiếm sản phẩm">
+		</div>
+
+		<div id="product-filter" style="display: none;">
+			<h2>Bộ lọc</h2>
+
+			<div>
+				<p>Loại sản phẩm</p>
+				<input type="checkbox" name="test" /><label for="test">Loại A</label><br />
+				<input type="checkbox" name="test" /><label for="test">Loại B</label>
+			</div>
+
+			<div>
+				<p>Sắp xếp theo</p>
+				<select id="filter-sort">
+					<option value="name">Tên</option>
+					<option value="price-down">Giá từ cao đến thấp</option>
+					<option value="price-up">Giá từ thấp đến cao</option>
+				</select>
+			</div>
+		</div>
+
+		<div id="product-list">
+		</div>
 	</main>
 
 	<footer>
@@ -41,7 +138,24 @@
 	</footer>
 
 	<script src="assets/js/main.js"></script>
-	<script></script>
+	<script>
+		let filterToggleState = false;
+
+		const filterToggle = document.getElementById("product-filter-toggle");
+		const filterElement = document.getElementById("product-filter");
+
+		filterToggle.addEventListener("click", () => {
+			filterToggleState = !filterToggleState;
+
+			if (filterToggleState) {
+				filterToggle.classList.add("active");
+				filterElement.style.removeProperty("display");
+			} else {
+				filterToggle.classList.remove("active");
+				filterElement.style.display = "none";
+			}
+		});
+	</script>
 </body>
 
 </html>
