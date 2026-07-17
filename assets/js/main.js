@@ -487,7 +487,7 @@ function getCartItems() {
 			price: data.price,
 			image: data.image,
 			type: data.type,
-			amount: localStorage.getItem(id)
+			amount: Number(localStorage.getItem(id))
 		});
 	}
 
