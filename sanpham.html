@@ -23,7 +23,8 @@
 			gap: 10px;
 		}
 
-		#product-filter-toggle, #search-box {
+		#product-filter-toggle,
+		#search-box {
 			padding: 10px;
 			border: 1px solid var(--theme-color-3);
 			border-radius: 5px;
@@ -78,6 +79,39 @@
 			border-radius: 5px;
 		}
 
+		#product-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		#product-list div {
+			width: 175px;
+			height: 250px;
+			border-radius: 5px;
+			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.25);
+			transition: box-shadow 0.25s ease;
+		}
+
+		#product-list div:hover {
+			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.75);
+		}
+
+		#product-list img {
+			width: 100%;
+			border-radius: 5px;
+		}
+
+		#product-list h4,
+		#product-list p {
+			margin: 0 15px;
+		}
+
+		#product-list p {
+			font-size: 12px;
+		}
+
 		@media (min-width: 1350px) {
 			main {
 				width: 1000px;
@@ -127,8 +161,7 @@
 			</div>
 		</div>
 
-		<div id="product-list">
-		</div>
+		<div id="product-list"></div>
 	</main>
 
 	<footer>
@@ -160,11 +193,20 @@
 		const filterSort = document.getElementById("filter-sort");
 
 		function renderProductList() {
-			console.log(searchBox.value);
-			console.log(filterSort.value);
+			for (const [id, data] of Object.entries(productData)) {
+				const itemDiv = document.getElementById(id);
+				const searchText = searchBox.value.toLowerCase();
 
-			for (const [a, b] of Object.entries(typeCheckboxes)) {
-				console.log(a, b.checked);
+				if (
+					typeCheckboxes[data.type].checked && (
+						data.name.toLowerCase().includes(searchText) ||
+						data.origin.toLowerCase().includes(searchText)
+					)
+				) {
+					itemDiv.style.removeProperty("display");
+				} else {
+					itemDiv.style.display = "none";
+				}
 			}
 		}
 
@@ -177,6 +219,8 @@
 
 		filterSort.addEventListener("change", renderProductList);
 
+		const productContainer = document.getElementById("product-list");
+
 		for (const [id, data] of Object.entries(productData)) {
 			if (!typeCheckboxes[data.type]) {
 				const checkboxInput = document.createElement("input");
@@ -184,17 +228,19 @@
 				checkboxInput.name = data.type;
 				checkboxInput.checked = true;
 				checkboxInput.addEventListener("change", renderProductList);
-
-				typeCheckboxes[data.type] = checkboxInput;
+				typeFilter.appendChild(checkboxInput);
 
 				const label = document.createElement("label");
 				label.for = data.type;
 				label.textContent = data.type;
-
-				typeFilter.appendChild(checkboxInput);
 				typeFilter.appendChild(label);
+
 				typeFilter.appendChild(document.createElement("br"));
+
+				typeCheckboxes[data.type] = checkboxInput;
 			}
+
+			productContainer.innerHTML += `<div id="${id}"><img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p></div>`;
 		}
 
 		renderProductList();
