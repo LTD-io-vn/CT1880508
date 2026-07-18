@@ -70,7 +70,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0006: {
-		name: "(Taylor's Version)",
+		name: "1989 (Taylor's Version)",
 		origin: "Taylor Swift",
 		description: "Phiên bản tái thu âm của album pop nổi tiếng 1989.",
 		price: 1450000,
@@ -94,7 +94,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0009: {
-		name: "Magic",
+		name: "24K Magic",
 		origin: "Bruno Mars",
 		description: "Album funk-pop nổi tiếng đạt nhiều giải thưởng Grammy.",
 		price: 1280000,
@@ -102,7 +102,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0010: {
-		name: "Access Memories",
+		name: "Random Access Memories",
 		origin: "Daft Punk",
 		description: "Album kinh điển với ca khúc Get Lucky.",
 		price: 1500000,
@@ -118,7 +118,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0012: {
-		name: "Hits",
+		name: "Greatest Hits",
 		origin: "Queen",
 		description: "Tuyển tập những ca khúc nổi tiếng nhất của Queen.",
 		price: 1480000,
@@ -126,7 +126,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0013: {
-		name: "Dark Side of the Moon",
+		name: "The Dark Side of the Moon",
 		origin: "Pink Floyd",
 		description: "Album rock huyền thoại với chất lượng thu âm xuất sắc.",
 		price: 1600000,
@@ -134,7 +134,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0014: {
-		name: "Road",
+		name: "Abbey Road",
 		origin: "The Beatles",
 		description: "Album cuối cùng được ban nhạc thu âm cùng nhau.",
 		price: 1580000,
@@ -166,7 +166,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0018: {
-		name: "Hours",
+		name: "After Hours",
 		origin: "The Weeknd",
 		description: "Album synth-pop nổi bật với Blinding Lights.",
 		price: 1370000,
@@ -174,7 +174,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0019: {
-		name: "Than Ever",
+		name: "Happier Than Ever",
 		origin: "Billie Eilish",
 		description: "Album thứ hai của Billie Eilish với nhiều bản hit.",
 		price: 1390000,
@@ -182,7 +182,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0020: {
-		name: "to Die",
+		name: "Born to Die",
 		origin: "Lana Del Rey",
 		description: "Album mang phong cách dream pop đặc trưng.",
 		price: 1410000,
@@ -206,7 +206,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0023: {
-		name: "Theory",
+		name: "Hybrid Theory",
 		origin: "Linkin Park",
 		description: "Album đầu tay mang tính biểu tượng của Linkin Park.",
 		price: 1460000,
@@ -214,7 +214,7 @@ const productData = {
 		type: "Đĩa than"
 	},
 	SP0024: {
-		name: "California",
+		name: "Hotel California",
 		origin: "Eagles",
 		description: "Album rock cổ điển với ca khúc Hotel California bất hủ.",
 		price: 1520000,
@@ -350,7 +350,7 @@ const productData = {
 		type: "Loa"
 	},
 	SP0041: {
-		name: "Kardon Aura Studio 4",
+		name: "Aura Studio 4",
 		origin: "Harman Kardon",
 		description: "Loa Bluetooth thiết kế trong suốt độc đáo, kết hợp âm thanh chất lượng cao và vẻ đẹp hiện đại.",
 		price: 7990000,
@@ -406,7 +406,7 @@ const productData = {
 		type: "Amply"
 	},
 	SP0048: {
-		name: "Audio AXA35",
+		name: "AXA35",
 		origin: "Cambridge Audio",
 		description: "Âm ly tích hợp thiết kế tối giản, tích hợp phono MM, mang lại trải nghiệm nghe nhạc tự nhiên.",
 		price: 11990000,
