@@ -79,6 +79,17 @@
 			border-radius: 5px;
 		}
 
+		#type-filter div {
+			display: flex;
+			gap: 5px;
+			align-items: center;
+		}
+
+		#type-filter input {
+			width: 20px;
+			height: 20px;
+		}
+
 		#product-list {
 			display: flex;
 			flex-wrap: wrap;
@@ -87,8 +98,10 @@
 		}
 
 		#product-list div {
+			display: flex;
+			flex-direction: column;
 			width: 175px;
-			height: 250px;
+			padding-bottom: 20px;
 			border-radius: 5px;
 			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.25);
 			transition: box-shadow 0.25s ease;
@@ -104,12 +117,18 @@
 		}
 
 		#product-list h4,
+		#product-list h5,
 		#product-list p {
 			margin: 0 15px;
 		}
 
+		#product-list h5 {
+			margin-top: auto;
+		}
+
 		#product-list p {
 			font-size: 12px;
+			margin-bottom: 10px;
 		}
 
 		@media (min-width: 1350px) {
@@ -187,7 +206,6 @@
 			}
 		});
 
-		const typeCheckboxes = {};
 		const searchBox = document.getElementById("search-box");
 		const typeFilter = document.getElementById("type-filter");
 		const filterSort = document.getElementById("filter-sort");
@@ -198,7 +216,7 @@
 				const searchText = searchBox.value.toLowerCase();
 
 				if (
-					typeCheckboxes[data.type].checked && (
+					document.getElementById(data.type).checked && (
 						data.name.toLowerCase().includes(searchText) ||
 						data.origin.toLowerCase().includes(searchText)
 					)
@@ -208,6 +226,10 @@
 					itemDiv.style.display = "none";
 				}
 			}
+		}
+
+		function displayDetails(id) {
+
 		}
 
 		searchBox.addEventListener("keydown", e => {
@@ -222,25 +244,11 @@
 		const productContainer = document.getElementById("product-list");
 
 		for (const [id, data] of Object.entries(productData)) {
-			if (!typeCheckboxes[data.type]) {
-				const checkboxInput = document.createElement("input");
-				checkboxInput.type = "checkbox";
-				checkboxInput.name = data.type;
-				checkboxInput.checked = true;
-				checkboxInput.addEventListener("change", renderProductList);
-				typeFilter.appendChild(checkboxInput);
-
-				const label = document.createElement("label");
-				label.for = data.type;
-				label.textContent = data.type;
-				typeFilter.appendChild(label);
-
-				typeFilter.appendChild(document.createElement("br"));
-
-				typeCheckboxes[data.type] = checkboxInput;
+			if (!document.getElementById(data.type)) {
+				typeFilter.innerHTML += `<div><input type="checkbox" id="${data.type}" onchange="renderProductList()" checked /><label for="${data.type}">${data.type}</label></div>`
 			}
 
-			productContainer.innerHTML += `<div id="${id}"><img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p></div>`;
+			productContainer.innerHTML += `<div id="${id}" onclick="displayDetails('${id}')"><img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p><h5>${data.price.toLocaleString(undefined, {style: "currency", currency: "VND"})}</h5></div>`;
 		}
 
 		renderProductList();
