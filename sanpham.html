@@ -231,6 +231,7 @@
 				<div>
 					<p>Sắp xếp theo</p>
 					<select id="filter-sort">
+						<option value="type">Loại</option>
 						<option value="name">Tên</option>
 						<option value="price-down">Giá từ cao đến thấp</option>
 						<option value="price-up">Giá từ thấp đến cao</option>
@@ -283,9 +284,29 @@
 		const filterSort = document.getElementById("filter-sort");
 
 		function renderProductList() {
-			for (const [id, data] of Object.entries(productData)) {
+			const entries = Object.entries(productData);
+
+			if (filterSort.value != "type") {
+				entries.sort((a, b) => {
+					if (filterSort.value == "price-up") {
+						return a[1].price - b[1].price;
+					}
+
+					if (filterSort.value == "price-down") {
+						return b[1].price - a[1].price;
+					}
+
+					return a[1].name.localeCompare(b[1].name);
+				});
+			}
+
+			let order = 0;
+
+			for (const [id, data] of entries) {
 				const itemDiv = document.getElementById(id);
 				const searchText = searchBox.value.toLowerCase();
+
+				itemDiv.style.order = order++;
 
 				if (
 					document.getElementById(data.type).checked && (
@@ -322,7 +343,7 @@
 				productType.textContent = `Loại sản phẩm: ${data.type}`;
 				productDescription.textContent = data.description;
 				productPrice.textContent = `Giá: ${data.price.toLocaleString(undefined, { style: "currency", currency: "VND" })} / sản phẩm`;
-				productAmount.value = "1";
+				productAmount.value = 1;
 				mainElement.classList.add("info-display");
 				window.scrollTo(0, 0);
 			}

@@ -463,6 +463,11 @@ const productData = {
 
 function addToCart(id, amount) {
 	if (id) {
+		if (amount % 1 != 0 || amount < 1 || amount > 100) {
+			alert("Số lượng phải là số nguyên trong khoảng từ 1 đến 100");
+			return;
+		}
+
 		let value = localStorage.getItem(id);
 
 		if (value == null) {
