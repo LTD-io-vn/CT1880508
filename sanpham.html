@@ -7,15 +7,57 @@
 
 	<title>Hoài Âm - Sản phẩm</title>
 
-	<link rel="icon" href="/assets/imgs/favicon.png">
-	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="icon" href="assets/imgs/favicon.png">
+	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 	<style>
 		main {
 			display: flex;
+			justify-content: center;
+			gap: 25px;
+		}
+
+		main.info-display #product-info-container {
+			display: flex;
+		}
+
+		main.info-display .separator {
+			display: block;
+		}
+
+		.separator {
+			display: none;
+			width: 1px;
+			background-color: var(--theme-color-3);
+		}
+
+		#product-list-container {
+			display: flex;
+		}
+
+		#product-list-container,
+		#product-info-container {
 			flex-direction: column;
 			gap: 10px;
+		}
+
+		#product-list-container {
+			width: 1000px;
+		}
+
+		#product-info-container {
+			display: none;
+			max-width: 350px;
+		}
+
+		#product-info-container h3,
+		#product-info-container p {
+			margin: 0;
+		}
+
+		#product-info-image {
+			width: 100%;
 		}
 
 		.product-search {
@@ -23,15 +65,15 @@
 			gap: 10px;
 		}
 
-		#product-filter-toggle,
-		#search-box {
+		.action-button,
+		.input-box {
 			padding: 10px;
 			border: 1px solid var(--theme-color-3);
 			border-radius: 5px;
 			background-color: transparent;
 		}
 
-		#product-filter-toggle {
+		.action-button {
 			background-color: var(--theme-color-1);
 			color: var(--theme-color-4);
 			border: none;
@@ -40,26 +82,29 @@
 				filter 0.25s ease;
 		}
 
-		#product-filter-toggle:hover {
-			filter: brightness(0.9);
+		.action-button:hover {
+			background-color: var(--theme-color-2);
 		}
 
-		#product-filter-toggle.active {
+		.action-button.active {
 			background-color: var(--theme-color-4);
 			color: var(--theme-color-1);
 		}
 
-		#product-filter-toggle.active:hover {
-			filter: brightness(2);
+		.action-button.active:hover {
+			background-color: var(--theme-color-3);
 		}
 
-		#product-filter-toggle {
+		.action-button {
 			border: none;
+		}
+
+		.input-box {
+			outline-color: var(--theme-color-4);
 		}
 
 		#search-box {
 			flex: 1;
-			outline-color: var(--theme-color-4);
 		}
 
 		#product-filter {
@@ -126,15 +171,27 @@
 			margin-top: auto;
 		}
 
-		#product-list p {
+		#product-list p,
+		#product-info-type {
 			font-size: 12px;
 			margin-bottom: 10px;
 		}
 
-		@media (min-width: 1350px) {
-			main {
-				width: 1000px;
-				margin: auto;
+		#product-info-price {
+			margin: 5px 0;
+		}
+
+		@media (max-width: 1100px) {
+			main.info-display {
+				align-items: center;
+			}
+
+			main.info-display .separator {
+				display: none;
+			}
+
+			main.info-display #product-list-container {
+				display: none;
 			}
 		}
 	</style>
@@ -143,44 +200,59 @@
 <body>
 	<header>
 		<button class="fa-solid fa-bars-staggered" id="nav-toggle"></button>
-		<a href="/trangchu.html"><img src="assets/imgs/logo-dark.png" height="40px"></a>
+		<a href="trangchu.html"><img src="assets/imgs/logo-dark.png" height="40px"></a>
 		<nav id="nav-bar">
 			<ul>
-				<li><a href="/trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
-				<li><a href="/gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
-				<li><a href="/sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
-				<li><a href="/giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
-				<li><a href="/dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
-				<li><a href="/dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
-				<li><a href="/lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
+				<li><a href="trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+				<li><a href="gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
+				<li><a href="sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
+				<li><a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
+				<li><a href="dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
+				<li><a href="dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
+				<li><a href="lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<div class="product-search">
-			<button id="product-filter-toggle"><i class="fa-solid fa-filter"></i></button>
-			<input id="search-box" type="text" placeholder="Tìm kiếm sản phẩm">
-		</div>
-
-		<div id="product-filter" style="display: none;">
-			<h2>Bộ lọc</h2>
-
-			<div id="type-filter">
-				<p>Loại sản phẩm</p>
+		<div id="product-list-container">
+			<div class="product-search">
+				<button id="product-filter-toggle" class="action-button"><i class="fa-solid fa-filter"></i></button>
+				<input id="search-box" class="input-box" type="text" placeholder="Tìm kiếm sản phẩm">
 			</div>
 
-			<div>
-				<p>Sắp xếp theo</p>
-				<select id="filter-sort">
-					<option value="name">Tên</option>
-					<option value="price-down">Giá từ cao đến thấp</option>
-					<option value="price-up">Giá từ thấp đến cao</option>
-				</select>
+			<div id="product-filter" style="display: none;">
+				<h2>Bộ lọc</h2>
+
+				<div id="type-filter">
+					<p>Loại sản phẩm</p>
+				</div>
+
+				<div>
+					<p>Sắp xếp theo</p>
+					<select id="filter-sort">
+						<option value="name">Tên</option>
+						<option value="price-down">Giá từ cao đến thấp</option>
+						<option value="price-up">Giá từ thấp đến cao</option>
+					</select>
+				</div>
 			</div>
+
+			<div id="product-list"></div>
 		</div>
 
-		<div id="product-list"></div>
+		<div class="separator"></div>
+
+		<div id="product-info-container">
+			<button class="action-button" onclick="displayDetails(null)"><i class="fa-solid fa-chevron-left"></i> <b>Trở lại</b></button>
+			<img id="product-info-image" />
+			<h3 id="product-info-title"></h3>
+			<p id="product-info-type"></p>
+			<p id="product-info-description"></p>
+			<h4 id="product-info-price"></h4>
+			<input id="product-info-amount" class="input-box" type="number" min="1" max="100" value="1" placeholder="Nhập số lượng (1 - 100)" />
+			<button id="product-info-add-to-cart" class="action-button active"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+		</div>
 	</main>
 
 	<footer>
@@ -228,9 +300,37 @@
 			}
 		}
 
-		function displayDetails(id) {
+		const mainElement = document.querySelector("main");
+		const productImage = document.getElementById("product-info-image");
+		const productTitle = document.getElementById("product-info-title");
+		const productType = document.getElementById("product-info-type");
+		const productDescription = document.getElementById("product-info-description");
+		const productPrice = document.getElementById("product-info-price");
+		const productAmount = document.getElementById("product-info-amount");
 
+		let selectedProductId;
+
+		function displayDetails(id) {
+			selectedProductId = id;
+
+			if (id == null) {
+				mainElement.classList.remove("info-display");
+			} else {
+				const data = productData[id];
+				productImage.src = data.image;
+				productTitle.textContent = `${data.origin}: ${data.name}`;
+				productType.textContent = `Loại sản phẩm: ${data.type}`;
+				productDescription.textContent = data.description;
+				productPrice.textContent = `Giá: ${data.price.toLocaleString(undefined, { style: "currency", currency: "VND" })} / sản phẩm`;
+				productAmount.value = "1";
+				mainElement.classList.add("info-display");
+				window.scrollTo(0, 0);
+			}
 		}
+
+		document.getElementById("product-info-add-to-cart").addEventListener("click", () => {
+			addToCart(selectedProductId, Number(productAmount.value));
+		});
 
 		searchBox.addEventListener("keydown", e => {
 			if (e.key == "Enter") {
@@ -248,7 +348,7 @@
 				typeFilter.innerHTML += `<div><input type="checkbox" id="${data.type}" onchange="renderProductList()" checked /><label for="${data.type}">${data.type}</label></div>`
 			}
 
-			productContainer.innerHTML += `<div id="${id}" onclick="displayDetails('${id}')"><img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p><h5>${data.price.toLocaleString(undefined, {style: "currency", currency: "VND"})}</h5></div>`;
+			productContainer.innerHTML += `<div id="${id}" onclick="displayDetails('${id}')"><img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p><h5>${data.price.toLocaleString(undefined, { style: "currency", currency: "VND" })}</h5></div>`;
 		}
 
 		renderProductList();
