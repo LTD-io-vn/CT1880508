@@ -189,7 +189,7 @@ footer {
 .gt-nd h2 {
     font-size: 20px;
     color: var(--theme-color-4);
-    padding-left: 12px;
+    padding-left: 0;
     margin-bottom: 12px;
     text-transform: uppercase;
 }
