@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hoài Âm - Thanh toán</title>
+
+    <link rel="icon" href="assets/imgs/favicon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/thanhtoan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <button class="fa-solid fa-bars-staggered" id="nav-toggle"></button>
+
+        <a href="trangchu.html">
+            <img src="assets/imgs/logo-dark.png" height="40" alt="Logo">
+        </a>
+
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li><a href="gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
+                <li><a href="sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
+                <li><a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
+                <li><a href="dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
+                <li><a href="dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
+                <li><a href="lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Thanh tiến trình -->
+        <section class="cart">
+
+            <div class="container">
+                <div class="cart-top-wrap">
+                    <div class="cart-top">
+
+                        <div class="cart-top-shopping cart-top-item">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+
+                        <div class="cart-top-address cart-top-item active-step">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+
+                        <div class="cart-top-payment cart-top-item">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="checkout-content-row">
+
+                    <!-- Thông tin khách hàng -->
+                    <div class="checkout-content-left">
+
+                        <h3>THÔNG TIN THANH TOÁN</h3>
+
+                        <form action="" method="POST" class="checkout-form">
+
+                            <div class="form-col-2">
+                                <div class="form-group">
+                                    <label>Tên *</label>
+                                    <input type="text" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Họ *</label>
+                                    <input type="text" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tên công ty (tuỳ chọn)</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Quốc gia/Khu vực *</label>
+                                <select required>
+                                    <option value="VN">Việt Nam</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Địa chỉ *</label>
+
+                                <div class="form-col-2">
+                                    <input type="text" placeholder="Địa chỉ" required>
+
+                                    <input type="text"
+                                           placeholder="Căn hộ, dãy phòng, đơn vị,... (không bắt buộc)">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mã bưu điện (tuỳ chọn)</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Thị trấn / Thành phố *</label>
+                                <input type="text" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Số điện thoại *</label>
+                                <input type="tel" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Địa chỉ email *</label>
+                                <input type="email" required>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox">
+                                    Giao hàng đến một địa chỉ khác?
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Ghi chú đơn hàng (tuỳ chọn)</label>
+
+                                <textarea rows="4"
+                                    placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!-- Đơn hàng -->
+                    <div class="checkout-content-right">
+
+                        <div class="order-review-box">
+
+                            <h3>ĐƠN HÀNG CỦA BẠN</h3>
+
+                            <table class="order-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>SẢN PHẨM</th>
+                                        <th>TẠM TÍNH</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="checkout-items">
+                                </tbody>
+
+                                <tfoot>
+
+                                    <tr class="subtotal-row">
+                                        <td>Tạm tính</td>
+                                        <td>0 <sup>đ</sup></td>
+                                    </tr>
+
+                                    <tr class="shipping-row">
+                                        <td>Shipment</td>
+
+                                        <td>
+                                            <div class="shipping-options">
+
+                                                <label>
+                                                    <input type="radio"
+                                                           name="checkout_shipping"
+                                                           checked>
+                                                    Giao hàng tiêu chuẩn:
+                                                    40.000 <sup>đ</sup>
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio"
+                                                           name="checkout_shipping">
+                                                    Giao hàng miễn phí
+                                                </label>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="total-row">
+                                        <td>Tổng</td>
+                                        <td class="font-bold">
+                                            0 <sup>đ</sup>
+                                        </td>
+                                    </tr>
+
+                                </tfoot>
+
+                            </table>
+
+                            <div class="payment-methods">
+                                <p><strong>Trả tiền mặt khi nhận hàng</strong></p>
+                                <p class="payment-desc">
+                                    Trả tiền mặt khi giao hàng
+                                </p>
+                            </div>
+
+                            <button
+                                class="btn-place-order"
+                                type="button"
+                                onclick="placeOrder()">
+                                ĐẶT HÀNG
+                            </button>
+
+                            <p class="privacy-notice">
+                                Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn hàng,
+                                hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục
+                                đích khác được mô tả trong
+                                <a href="#">chính sách riêng tư</a>.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Sản phẩm của nhóm 8 CT18805</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/thanhtoan.js"></script>
+
+</body>
+
+</html>
