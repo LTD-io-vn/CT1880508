@@ -1,47 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoài Âm - Giỏ hàng</title>
 
-	<title>Hoài Âm - Giỏ hàng</title>
-
-	<link rel="icon" href="/assets/imgs/favicon.png">
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
-	<style></style>
+    <link rel="icon" href="assets/imgs/favicon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/giohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-	<header>
-		<button class="fa-solid fa-bars-staggered" id="nav-toggle"></button>
-		<a href="/trangchu.html"><img src="assets/imgs/logo-dark.png" height="40px"></a>
-		<nav id="nav-bar">
-			<ul>
-				<li><a href="/trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
-				<li><a href="/gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
-				<li><a href="/sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
-				<li><a href="/giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
-				<li><a href="/dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
-				<li><a href="/dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
-				<li><a href="/lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header>
+        <button class="fa-solid fa-bars-staggered" id="nav-toggle"></button>
 
-	<main>
-		<h1>Test</h1>
-		<p>ND</p>
-	</main>
+        <a href="trangchu.html">
+            <img src="assets/imgs/logo-dark.png" height="40" alt="Logo">
+        </a>
 
-	<footer>
-		<p>Sản phẩm của nhóm 8 CT18805</p>
-	</footer>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+                <li><a href="gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
+                <li><a href="sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
+                <li><a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
+                <li><a href="dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
+                <li><a href="dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
+                <li><a href="lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<script src="assets/js/main.js"></script>
-	<script></script>
+    <main>
+        <div class="header">
+            <div class="cart-wrapper">
+                <button id="cartBtn" class="cart-btn">
+                    🛒 Giỏ hàng <span class="cart-count">0</span>
+                </button>
+
+                <div id="cartDropdown" class="cart-dropdown">
+                    <div class="empty-cart">
+                        <img src="https://cdn-icons-png.flaticon.com/512/11329/11329060.png"
+                             alt="Giỏ hàng trống"
+                             class="empty-cart-img">
+
+                        <p class="empty-cart-text">
+                            Chưa có sản phẩm trong giỏ hàng của bạn.
+                        </p>
+
+                        <a href="sanpham.html" class="continue-shopping-btn">
+                            TIẾP TỤC MUA SẮM
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="cart">
+            <div class="container">
+                <div class="cart-top-wrap">
+                    <div class="cart-top">
+                        <div class="cart-top-shopping cart-top-item">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+
+                        <div class="cart-top-address cart-top-item">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+
+                        <div class="cart-top-payment cart-top-item">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="cart-content-row">
+
+                    <div class="cart-content-left">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="3" style="text-align:left;">SẢN PHẨM</th>
+                                    <th style="text-align:right;">GIÁ</th>
+                                    <th style="text-align:center;">SỐ LƯỢNG</th>
+                                    <th style="text-align:right;">TẠM TÍNH</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                        <div class="cart-content-left-button">
+                            <button class="btn-continue"
+                                    onclick="window.location.href='sanpham.html'">
+                                ← TIẾP TỤC XEM SẢN PHẨM
+                            </button>
+
+                            <button class="btn-update" onclick="clearAllCart()">
+                                XÓA TẤT CẢ
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-content-right">
+                        <h3>TỔNG CỘNG GIỎ HÀNG</h3>
+
+                        <div class="summary-row">
+                            <span>Tạm tính</span>
+                            <span class="price-text subtotal-price">
+                                0 <sup>đ</sup>
+                            </span>
+                        </div>
+
+                        <div class="shipping-box">
+                            <p class="shipping-title">Shipment</p>
+
+                            <div class="shipping-options">
+                                <label>
+                                    <input type="radio"
+                                           name="shipping_method"
+                                           value="40000"
+                                           checked>
+                                    <span>
+                                        <b>Giao hàng tiêu chuẩn: 40.000 <sup>đ</sup></b>
+                                    </span>
+                                </label>
+
+                                <label>
+                                    <input type="radio"
+                                           name="shipping_method"
+                                           value="0">
+                                    <span>Giao hàng miễn phí</span>
+                                </label>
+                            </div>
+
+                            <p class="shipping-note">
+                                Các tùy chọn vận chuyển sẽ được cập nhật trong quá trình thanh toán.
+                            </p>
+
+                            <a href="#" class="shipping-link">
+                                Tính phí vận chuyển
+                            </a>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span>Tổng</span>
+                            <span class="price-text total-price font-bold">
+                                0 <sup>đ</sup>
+                            </span>
+                        </div>
+
+                        <a href="thanhtoan.html" style="text-decoration:none; display:block;">
+                            <button class="btn-checkout" type="button">
+                                TIẾN HÀNH THANH TOÁN
+                            </button>
+                        </a>
+
+                        <div class="coupon-box">
+                            <p class="coupon-title">
+                                <i class="fa-solid fa-tag"></i>
+                                <b>Mã ưu đãi</b>
+                            </p>
+
+                            <input type="text" placeholder="Nhập mã giảm giá">
+
+                            <button class="btn-apply-coupon">
+                                Áp dụng
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sản phẩm của nhóm 8 CT18805</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/giohang.js"></script>
 </body>
 
 </html>
