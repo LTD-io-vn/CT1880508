@@ -24,6 +24,11 @@ header {
 	position: sticky;
 	padding: 15px 15px 15px 30px;
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.25);
+	z-index: 1;
+}
+
+header img {
+	height: 40px;
 }
 
 header ul {
@@ -41,7 +46,6 @@ header a {
 	text-decoration: none;
 	color: var(--theme-color-4);
 	font-weight: bold;
-	z-index: 1;
 	transition: color 0.2s ease;
 }
 
@@ -56,10 +60,88 @@ main {
 
 footer {
 	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 25px;
+	background-color: var(--theme-color-4);
+	color: var(--theme-color-1);
+	padding: 50px 25px 25px 25px;
+}
+
+footer img {
+	height: 40px;
+}
+
+footer button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 2px solid rgb(0, 200, 0);
+	color: rgb(0, 200, 0);
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transition: all 0.2s ease;
+	font-size: 16px;
+}
+
+footer button:hover {
+	background-color: rgb(0, 200, 0);
+	color: var(--theme-color-1);
+	transform: translate(0, -5px);
+}
+
+.footer-info-container {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	background-color: var(--theme-color-2);
-	color: var(--theme-color-4);
+	gap: 25px 50px;
+}
+
+.footer-list-container {
+	display: flex;
+	gap: 25px 50px;
+}
+
+.footer-info {
+	max-width: 500px;
+}
+
+.footer-info-container h2 {
+	margin-top: 15px;
+}
+
+.footer-info-container p {
+	text-align: justify;
+}
+
+.footer-info-container ul {
+	list-style-type: none;
+	min-width: 200px;
+	padding: 0;
+}
+
+.footer-info-container ul a {
+	color: var(--theme-color-1);
+	text-decoration: none;
 	font-weight: bold;
+	transition: color 0.2s ease;
+}
+
+.footer-info-container ul li:not(:last-child) {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--theme-color-3);
+}
+
+.footer-info-container ul a:hover {
+	color: var(--theme-color-3);
+}
+
+@media (max-width: 500px) {
+	.footer-list-container {
+		flex-direction: column;
+	}
 }
 
 #nav-toggle {
@@ -67,16 +149,7 @@ footer {
 	height: 48px;
 	width: 48px;
 	font-size: 30px;
-	background-color: transparent;
-	border: none;
-	border-radius: 5px;
-	color: var(--theme-color-4);
-	z-index: 1;
-	transition: background-color 0.2s ease;
-}
-
-#nav-toggle:hover {
-	background-color: rgba(0, 0, 0, 0.1);
+	padding: 0;
 }
 
 #nav-bar i {
@@ -116,6 +189,10 @@ footer {
 		margin-right: 15px;
 	}
 
+	header a {
+		z-index: 2;
+	}
+
 	header li {
 		display: block;
 		margin: 15px 0;
@@ -123,5 +200,57 @@ footer {
 
 	#nav-toggle {
 		display: block;
+		z-index: 2;
 	}
+}
+
+.button {
+	padding: 10px 20px;
+	border: none;
+	color: var(--theme-color-4);
+	background-color: transparent;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.button:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button.active {
+	color: var(--theme-color-1);
+	background-color: var(--theme-color-4);
+}
+
+.button.active:hover {
+	background-color: var(--theme-color-3);
+}
+
+.button.light {
+	background-color: var(--theme-color-1);
+}
+
+.button.light:hover {
+	background-color: var(--theme-color-2);
+}
+
+.button.bordered {
+	border: 1px solid var(--theme-color-4);
+}
+
+.button.bordered:hover {
+	background-color: var(--theme-color-4);
+	color: var(--theme-color-1);
+}
+
+.input {
+	border-radius: 5px;
+	border: 1px solid var(--theme-color-3);
+	padding: 10px;
+	outline: none;
+}
+
+.input:focus {
+	border: 1px solid #000;
 }

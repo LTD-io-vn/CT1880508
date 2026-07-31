@@ -9,15 +9,14 @@
 
 	<link rel="icon" href="assets/imgs/favicon.png">
 	<link rel="stylesheet" href="assets/css/main.css">
-	<link rel="stylesheet" href="assets/css/dangky.css">
 	<link rel="stylesheet" href="assets/css/form.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
 	<header>
-		<button class="fa-solid fa-bars-staggered" id="nav-toggle"></button>
-		<a href="trangchu.html"><img src="assets/imgs/logo-dark.png" height="40px"></a>
+		<button class="button fa-solid fa-bars-staggered" id="nav-toggle"></button>
+		<a href="trangchu.html"><img src="assets/imgs/logo-dark.png"></a>
 		<nav id="nav-bar">
 			<ul>
 				<li><a href="trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
@@ -30,52 +29,77 @@
 			</ul>
 		</nav>
 	</header>
-
-	<main class="form-page">
-        <div class="login-card">
-            <h2>ĐĂNG KÝ</h2>
-            <form action="" method="POST">
-                <div class="form-group">
-                    <label for="reg-username">Tên tài khoản <span class="required">*</span></label>
-                    <input type="text" id="reg-username" name="username" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="reg-email">Địa chỉ email <span class="required">*</span></label>
-                    <input type="email" id="reg-email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="reg-password">Mật khẩu <span class="required">*</span></label>
-                    <input type="password" id="reg-password" name="password" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="reg-confirm-password">Xác nhận mật khẩu <span class="required">*</span></label>
-                    <input type="password" id="reg-confirm-password" name="confirmPassword" required>
-                </div>
-
-                <button type="submit" class="btn-submit">ĐĂNG KÝ</button>
-
-                <div class="form-footer">
-                    <a href="dangnhap.html">Đã có tài khoản? Đăng nhập ngay</a>
-                </div>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <p>Sản phẩm của nhóm 8 CT18805</p>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/dangky.js"></script>
-
-
-
 	
-	
-	<script></script>
+	<main>
+		<form target="." method="post" onsubmit="return onRegisterSubmit();">
+			<h2><i class="fa-solid fa-user-plus"></i>ĐĂNG KÝ</h2>
+
+			<div>
+				<h4>Tên tài khoản *</h4>
+				<input class="input" id="username" name="username" type="text">
+			</div>
+
+			<div>
+				<h4>Địa chỉ email *</h4>
+				<input class="input" id="email" name="email" type="text">
+			</div>
+
+			<div>
+				<h4>Mật khẩu *</h4>
+				<input class="input" id="password" name="pass" type="password">
+			</div>
+
+			<div>
+				<h4>Xác nhận mật khẩu *</h4>
+				<input class="input" id="confirm-password" name="confirmpass" type="password">
+			</div>
+
+			<button type="submit" class="active button">ĐĂNG KÝ</button>
+			
+			<a href="dangnhap.html">Đã có tài khoản? Đăng nhập ngay</a>
+		</form>
+	</main>
+
+	<footer>
+		<div class="footer-info-container">
+			<div class="footer-info">
+				<a href="trangchu.html"><img src="assets/imgs/logo-light.png"></a>
+				<p>Hoài Âm là điểm đến dành cho những người yêu âm nhạc và giá trị của thời gian. Chúng tôi cung cấp đĩa vinyl chính hãng, máy nghe nhạc cổ điển cùng nhiều phụ kiện được tuyển chọn kỹ lưỡng, giúp bạn tận hưởng âm thanh mộc mạc và chân thực như những ngày đầu. Với niềm đam mê dành cho âm nhạc, Hoài Âm mong muốn mang đến một không gian nơi mỗi giai điệu đều lưu giữ những ký ức đáng trân trọng.</p>
+			</div>
+
+			<div class="footer-list-container">
+				<div class="footer-info">
+					<h2>Thông tin</h2>
+					<ul>
+						<li><a href="#">Bảo mật thông tin</a></li>
+						<li><a href="#">Chính sách đổi trả</a></li>
+						<li><a href="#">Chính sách vận chuyển</a></li>
+						<li><a href="#">Hình thức thanh toán</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-info">
+					<h2>Trợ giúp</h2>
+					<ul>
+						<li><a href="#">Trang chủ</a></li>
+						<li><a href="#">Giỏ hàng</a></li>
+						<li><a href="#">Tài khoản</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<a href="#"><button title="Facebook"><i class="fa-brands fa-facebook-f"></i></button></a>
+			<a href="#"><button title="Instagram"><i class="fa-brands fa-instagram"></i></button></a>
+			<a href="#"><button title="YouTube"><i class="fa-brands fa-youtube"></i></button></a>
+			<a href="#"><button title="Shopee"><i class="fa-solid fa-bag-shopping"></i></button></a>
+			<a href="#"><button title="TikTok"><i class="fa-brands fa-tiktok"></i></button></a>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>

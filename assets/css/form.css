@@ -1,0 +1,39 @@
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px;
+}
+
+form {
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+form i {
+	margin-right: 15px;
+}
+
+main h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+main h4 {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+main .input {
+	width: 300px;
+}
+
+@media (max-width: 525px) {
+	form {
+		box-shadow: none;
+	}
+}
