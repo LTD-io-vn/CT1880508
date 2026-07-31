@@ -29,7 +29,7 @@ main h4 {
 }
 
 main .input {
-	width: 300px;
+	width: 275px;
 }
 
 @media (max-width: 525px) {
