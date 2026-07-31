@@ -1,0 +1,124 @@
+
+main.contact-page {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    display: block; 
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #111111;
+    line-height: 1.6;
+}
+
+
+.intro-text {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #222222;
+}
+
+
+.contact-section {
+    margin-bottom: 25px;
+}
+
+.contact-section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+    
+    
+    font-family: Arial, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
+.contact-section p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.contact-section .sub-text {
+    font-size: 14px;
+    color: #444444;
+}
+
+
+.phone-link, 
+.zalo-link, 
+.email-link {
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-link:hover, 
+.zalo-link:hover, 
+.email-link:hover {
+    text-decoration: underline;
+}
+
+
+.contact-notes {
+    margin-top: 35px;
+    font-size: 15px;
+    color: #222222;
+}
+
+.contact-notes p {
+    margin-bottom: 15px;
+}
+
+
+.floating-contact {
+    position: fixed;
+    bottom: 25px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.float-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.float-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+.float-btn.phone {
+    background-color: #4caf50; 
+}
+
+.float-btn.zalo {
+    background-color: #0088ff; 
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.float-btn.whatsapp {
+    background-color: #25d366; 
+    font-size: 22px;
+}
+
+.float-btn.messenger {
+    background-color: #0084ff; 
+}

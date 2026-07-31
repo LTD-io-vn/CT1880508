@@ -7,39 +7,70 @@
 
 	<title>Hoài Âm - Đăng nhập</title>
 
-	<link rel="icon" href="/assets/imgs/favicon.png">
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<link rel="stylesheet" href="/assets/css/form.css">
+	<link rel="icon" href="assets/imgs/favicon.png">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/dangnhap.css">
+	<link rel="stylesheet" href="assets/css/form.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<header>
 		<button class="fa-solid fa-bars-staggered" id="nav-toggle"></button>
-		<a href="/trangchu.html"><img src="assets/imgs/logo-dark.png" height="40px"></a>
+		<a href="trangchu.html"><img src="assets/imgs/logo-dark.png" height="40px"></a>
 		<nav id="nav-bar">
 			<ul>
-				<li><a href="/trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
-				<li><a href="/gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
-				<li><a href="/sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
-				<li><a href="/giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
-				<li><a href="/dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
-				<li><a href="/dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
-				<li><a href="/lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
+				<li><a href="trangchu.html"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
+				<li><a href="gioithieu.html"><i class="fa-solid fa-circle-info"></i>Giới thiệu</a></li>
+				<li><a href="sanpham.html"><i class="fa-solid fa-bag-shopping"></i>Sản phẩm</a></li>
+				<li><a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></li>
+				<li><a href="dangnhap.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Đăng nhập</a></li>
+				<li><a href="dangky.html"><i class="fa-solid fa-user-plus"></i>Đăng ký</a></li>
+				<li><a href="lienhe.html"><i class="fa-solid fa-envelope"></i>Liên hệ</a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<main>
-		<h1>Form</h1>
-	</main>
+	<main class="form-page">
+    <div class="login-card">
+        <h2>ĐĂNG NHẬP</h2>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="username">Tên tài khoản hoặc địa chỉ email <span class="required">*</span></label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu <span class="required">*</span></label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Ghi nhớ mật khẩu</label>
+            </div>
+
+            <button type="submit" class="btn-submit">ĐĂNG NHẬP</button>
+
+            <div class="form-footer">
+                <a href="dangky.html">Chưa có tài khoản?Đăng ký ngay</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dangnhap.js"></script>
+	
 
 	<footer>
 		<p>Sản phẩm của nhóm 8 CT18805</p>
 	</footer>
 
-	<script src="assets/js/main.js"></script>
-	<script></script>
+	
 </body>
 
 </html>
