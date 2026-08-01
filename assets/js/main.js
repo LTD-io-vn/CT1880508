@@ -750,7 +750,7 @@ let navToggleState = false;
 const navToggle = document.getElementById("nav-toggle");
 const navBar = document.getElementById("nav-bar");
 
-navToggle.addEventListener("click", function () {
+navToggle.addEventListener("click", function() {
 	navToggleState = !navToggleState;
 	if (navToggleState) {
 		navBar.classList.add("visible");
