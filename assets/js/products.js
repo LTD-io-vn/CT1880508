@@ -29,7 +29,7 @@ document.getElementById("filter-sort").value = filterSort;
 const entries = Object.entries(productData);
 
 if (filterSort != "type") {
-	entries.sort((a, b) => {
+	entries.sort(function(a, b) {
 		if (filterSort == "price-up") {
 			return a[1].price - b[1].price;
 		}
