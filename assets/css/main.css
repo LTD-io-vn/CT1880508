@@ -205,7 +205,7 @@ footer button:hover {
 }
 
 .button {
-	padding: 10px;
+	padding: 10px 20px;
 	border: none;
 	color: var(--theme-color-4);
 	background-color: transparent;
@@ -253,4 +253,10 @@ footer button:hover {
 
 .input:focus {
 	border: 1px solid #000;
+}
+
+.select {
+	border: 10px solid transparent;
+	outline: 1px solid var(--theme-color-3);
+	border-radius: 5px;
 }

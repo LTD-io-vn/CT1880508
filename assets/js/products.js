@@ -55,7 +55,7 @@ for (const [id, data] of entries) {
 	if (typeIncluded) {
 		if (!searchText || data.name.toLowerCase().includes(searchText) || data.origin.toLowerCase().includes(searchText)) {
 			const div = document.createElement("div");
-			div.innerHTML = `<img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p><h5>${data.price.toLocaleString(undefined, { style: "currency", currency: "VND" })}</h5>`;
+			div.innerHTML = `<img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p><h5>${toStringPrice(data.price)}</h5>`;
 			div.onclick = () => displayProductDetails(id);
 			productContainer.appendChild(div);
 		}

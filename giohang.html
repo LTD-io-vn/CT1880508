@@ -11,6 +11,275 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/cart.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+	<style>
+		.cart-content-row {
+			display: flex;
+			justify-content: space-between;
+			gap: 40px;
+		}
+	
+		.cart-content-left {
+			flex: 1.6;
+		}
+	
+		.cart-content-left table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+	
+		.cart-content-left th {
+			padding: 15px 0;
+			border-bottom: 2px solid #eee;
+			font-size: 14px;
+			font-weight: bold;
+			color: #000;
+		}
+	
+		.cart-content-left td {
+			padding: 20px 0;
+			border-bottom: 1px solid #eee;
+			vertical-align: middle;
+		}
+	
+		.td-img img {
+			display: block;
+			width: 70px;
+			height: auto;
+			margin: 0 15px;
+		}
+	
+		.td-name p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 1.4;
+			color: #333;
+		}
+	
+		.td-price,
+		.td-total {
+			font-size: 14px;
+			color: #000;
+		}
+	
+		.td-price,
+		.td-total {
+			text-align: right;
+		}
+	
+		.td-total {
+			font-weight: bold;
+		}
+	
+		.td-quantity {
+			text-align: center;
+		}
+
+		.remove-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 24px;
+			height: 24px;
+			border: 1px solid #ccc;
+			border-radius: 50%;
+			background: #fff;
+			color: #ccc;
+			font-size: 16px;
+			cursor: pointer;
+		}
+	
+		.remove-btn:hover {
+			color: red;
+			border-color: red;
+		}
+
+		.quantity-group {
+			display: inline-flex;
+			border: 1px solid #ddd;
+		}
+	
+		.qty-btn {
+			width: 25px;
+			height: 30px;
+			border: none;
+			background: #f9f9f9;
+			font-size: 14px;
+			cursor: pointer;
+		}
+	
+		.quantity-group input {
+			width: 35px;
+			height: 30px;
+			border: none;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			text-align: center;
+			outline: none;
+		}
+	
+		.quantity-group input::-webkit-outer-spin-button,
+		.quantity-group input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		.cart-content-left-button {
+			display: flex;
+			gap: 15px;
+			margin-top: 25px;
+		}
+	
+		.cart-content-left-button button {
+			padding: 12px 20px;
+			font-size: 13px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	
+		.btn-continue {
+			background: #fff;
+			border: 2px solid #000;
+			color: #000;
+		}
+	
+		.btn-continue:hover {
+			background: #000;
+			color: #fff;
+		}
+	
+		.btn-update {
+			background: #777;
+			border: none;
+			color: #fff;
+		}
+	
+		.btn-update:hover {
+			background: #555;
+		}
+
+		.cart-content-right {
+			flex: 1;
+			padding-left: 30px;
+			border-left: 1px solid #eee;
+		}
+	
+		.cart-content-right h3 {
+			margin-top: 0;
+			padding-bottom: 15px;
+			border-bottom: 2px solid #eee;
+			font-size: 15px;
+			font-weight: bold;
+		}
+	
+		.summary-row {
+			display: flex;
+			justify-content: space-between;
+			padding: 15px 0;
+			font-size: 14px;
+		}
+	
+		.price-text {
+			text-align: right;
+		}
+	
+		.total-row {
+			margin: 20px 0;
+			padding: 20px 0;
+			border-top: 2px solid #eee;
+			border-bottom: 2px solid #eee;
+		}
+	
+		.font-bold {
+			font-weight: bold;
+		}
+
+		.shipping-box {
+			padding-bottom: 15px;
+			font-size: 13px;
+			color: #333;
+		}
+	
+		.shipping-title {
+			margin: 0 0 10px;
+			color: #777;
+		}
+	
+		.shipping-options label {
+			display: flex;
+			align-items: flex-start;
+			gap: 8px;
+			margin-bottom: 8px;
+			cursor: pointer;
+		}
+	
+		.shipping-options input[type="radio"] {
+			margin-top: 3px;
+		}
+	
+		.shipping-note {
+			margin: 10px 0;
+			font-size: 12px;
+			line-height: 1.4;
+			color: #777;
+		}
+	
+		.shipping-link {
+			color: #000;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		.btn-checkout {
+			width: 100%;
+			margin-bottom: 30px;
+			padding: 15px 0;
+			border: none;
+			background: #000;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			cursor: pointer;
+		}
+	
+		.btn-checkout:hover {
+			background: #333;
+		}
+
+		.coupon-box {
+			padding-top: 20px;
+			border-top: 1px solid #eee;
+		}
+	
+		.coupon-title {
+			margin: 0 0 15px;
+			font-size: 14px;
+		}
+	
+		.coupon-box input {
+			width: 100%;
+			padding: 12px;
+			margin-bottom: 10px;
+			border: 1px solid #ddd;
+			box-sizing: border-box;
+			outline: none;
+		}
+	
+		.btn-apply-coupon {
+			width: 100%;
+			padding: 12px 0;
+			border: 1px solid #ddd;
+			background: #f4f4f4;
+			color: #333;
+			font-size: 13px;
+			cursor: pointer;
+		}
+	
+		.btn-apply-coupon:hover {
+			background: #e9e9e9;
+		}
+	</style>
 </head>
 
 <body>
@@ -31,25 +300,80 @@
 	</header>
 	
 	<main>
-		<div class="cart-progress">
-            <div class="cart-container">
-                <div class="cart-top-wrap">
-                    <div class="cart-top">
-                        <div class="cart-top-shopping cart-top-item active-step">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
+		<div class="cart-container">
+			<div class="cart-progress">
+				<div class="active-step"><i class="fa-solid fa-basket-shopping"></i></div>
+				<div><i class="fa-solid fa-map-location-dot"></i></div>
+				<div><i class="fa-solid fa-money-check-dollar"></i></div>
+			</div>
+		</div>
 
-                        <div class="cart-top-address cart-top-item">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                        </div>
-
-                        <div class="cart-top-payment cart-top-item">
-                            <i class="fa-solid fa-money-check-dollar"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="cart-container">
+			<div class="cart-content-row">
+				<div class="cart-content-left">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="3" style="text-align:left;">SẢN PHẨM</th>
+								<th style="text-align:right;">GIÁ</th>
+								<th style="text-align:center;">SỐ LƯỢNG</th>
+								<th style="text-align:right;">TẠM TÍNH</th>
+							</tr>
+						</thead>
+			
+						<tbody>
+						</tbody>
+					</table>
+			
+					<div class="cart-content-left-button">
+						<a href="sanpham.html"><button class="btn-continue"><i class="fa-solid fa-arrow-left"></i> TIẾP TỤC XEM SẢN PHẨM</button></a>
+						<button class="btn-update" onclick="clearAllCart()">XÓA TẤT CẢ</button>
+					</div>
+				</div>
+			
+				<div class="cart-content-right">
+					<h3>TỔNG CỘNG GIỎ HÀNG</h3>
+			
+					<div class="summary-row">
+						<span>Tạm tính</span>
+						<span class="price-text subtotal-price">0đ</span>
+					</div>
+			
+					<div class="shipping-box">
+						<p class="shipping-title">Shipment</p>
+			
+						<div class="shipping-options">
+							<label>
+								<input type="radio" name="shipping_method" value="40000" checked>
+								<span><b>Giao hàng tiêu chuẩn: 40.000đ</b></span>
+							</label>
+			
+							<label>
+								<input type="radio" name="shipping_method" value="0">
+								<span>Giao hàng miễn phí</span>
+							</label>
+						</div>
+			
+						<p class="shipping-note">Các tùy chọn vận chuyển sẽ được cập nhật trong quá trình thanh toán.</p>
+					</div>
+			
+					<div class="summary-row total-row">
+						<span>Tổng</span>
+						<span class="price-text total-price font-bold">0đ</span>
+					</div>
+			
+					<a href="thanhtoan.html" style="text-decoration: none; display: block;">
+						<button class="btn-checkout" type="button">TIẾN HÀNH THANH TOÁN</button>
+					</a>
+			
+					<div class="coupon-box">
+						<p class="coupon-title"><i class="fa-solid fa-tag"></i> <b>Mã ưu đãi</b></p>
+						<input type="text" placeholder="Nhập mã giảm giá">
+						<button class="btn-apply-coupon">Áp dụng</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 	<footer>
@@ -92,6 +416,7 @@
 	</footer>
 
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/cart.js"></script>
 </body>
 
 </html>

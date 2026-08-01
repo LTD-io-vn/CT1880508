@@ -563,6 +563,10 @@ function onRegisterSubmit() {
 	return true;
 }
 
+function toStringPrice(value) {
+	return `${value.toLocaleString("vi-VN")}đ`;
+}
+
 let selectedProductId;
 
 function displayProductDetails(id) {
@@ -578,11 +582,69 @@ function displayProductDetails(id) {
 		document.getElementById("product-info-title").textContent = `${data.origin}: ${data.name}`;
 		document.getElementById("product-info-type").textContent = `Loại sản phẩm: ${data.type}`;
 		document.getElementById("product-info-description").textContent = data.description;
-		document.getElementById("product-info-price").textContent = `Giá: ${data.price.toLocaleString(undefined, { style: "currency", currency: "VND" })} / sản phẩm`;
+		document.getElementById("product-info-price").textContent = `Giá: ${toStringPrice(data.price)} / sản phẩm`;
 		document.getElementById("product-info-amount").value = 1;
 		mainElement.classList.add("info-display");
 		window.scrollTo(0, 0);
 	}
+}
+
+function renderCheckoutPage() {
+	const tbody = document.getElementById("checkout-items");
+
+	if (!tbody) return;
+
+	const items = getCartItems();
+
+	tbody.innerHTML = "";
+
+	let subtotal = 0;
+
+	if (items.length === 0) {
+		tbody.innerHTML = `<tr><td colspan="2" style="text-align:center;padding:30px">Không có sản phẩm trong giỏ hàng.</td></tr>`;
+		document.querySelector(".subtotal-row td:last-child").innerHTML = `0đ`;
+		document.querySelector(".total-row td:last-child").innerHTML = `0đ`;
+		return;
+	}
+
+	items.forEach(function(item) {
+		subtotal += item.price * item.amount;
+		tbody.innerHTML += `<tr><td>${item.origin} - ${item.name}<b> × ${item.amount} </b></td><td>${toStringPrice(item.price * item.amount)}</td></tr>`;
+	});
+
+	document.querySelector(".subtotal-row td:last-child").innerHTML = toStringPrice(subtotal);
+	updateCheckoutTotal();
+}
+
+function updateCheckoutTotal() {
+	let subtotal = 0;
+
+	const items = getCartItems();
+
+	items.forEach(function(item) {
+		subtotal += item.price * item.amount;
+	});
+
+	let shipping = 40000;
+	const shippingRadio = document.querySelectorAll("input[name='checkout_shipping']");
+
+	if (shippingRadio.length > 1 && shippingRadio[1].checked) {
+		shipping = 0;
+	}
+
+	document.querySelector(".total-row td:last-child").innerHTML = toStringPrice(subtotal + shipping);
+}
+
+function placeOrder() {
+	const items = getCartItems();
+
+	if (items.length === 0) {
+		alert("Giỏ hàng đang trống.");
+		return false;
+	}
+
+	clearCart();
+	return true;
 }
 
 let navToggleState = false;
