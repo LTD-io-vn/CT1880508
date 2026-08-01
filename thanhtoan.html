@@ -125,6 +125,7 @@
 	
 		.total-row td {
 			font-size: 16px;
+			font-weight: bold;
 		}
 
 		.shipping-row .shipping-options {
@@ -140,16 +141,6 @@
 			gap: 8px;
 			font-size: 13px;
 			cursor: pointer;
-		}
-
-		.payment-methods {
-			margin: 20px 0;
-			font-size: 14px;
-		}
-	
-		.payment-desc {
-			margin-top: 5px;
-			color: var(--theme-color-3);
 		}
 
 		.order-review-box button {
@@ -299,7 +290,7 @@
 	
 						<tfoot>
 							<tr class="subtotal-row">
-								<td>Tạm tính</td>
+								<td><b>Tạm tính</b></td>
 								<td>0đ</td>
 							</tr>
 
@@ -326,12 +317,7 @@
 							</tr>
 						</tfoot>
 					</table>
-	
-					<div class="payment-methods">
-						<p><b>Trả tiền mặt khi nhận hàng</b></p>
-						<p class="payment-desc">Trả tiền mặt khi giao hàng</p>
-					</div>
-	
+
 					<button class="active button" type="submit" form="checkout-form">ĐẶT HÀNG</button>
 
 					<p class="privacy-notice">Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn hàng, hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong <a href="#">chính sách riêng tư</a>.</p>

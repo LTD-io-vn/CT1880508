@@ -564,7 +564,7 @@ function onRegisterSubmit() {
 }
 
 function toStringPrice(value) {
-	return `${value.toLocaleString("vi-VN")}đ`;
+	return `${value.toLocaleString("vi-VN")} đ`;
 }
 
 let selectedProductId;
