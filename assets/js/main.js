@@ -636,19 +636,12 @@ function updateCheckoutTotal() {
 function placeOrder() {
 	if (getCartItems().length === 0) {
 		alert("Giỏ hàng đang trống.");
-		return false;
-	}
-
-	clearCart();
-	return true;
-}
-
-function checkoutSubmit() {
-	if (getCartItems().length === 0) {
-		alert("Giỏ hàng đang trống.");
 	} else {
-		document.getElementById("checkout-form").submit();
+		clearCart();
+		window.location.href = "dathangthanhcong.html";
 	}
+
+	return false;
 }
 
 function renderCartPage() {
