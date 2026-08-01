@@ -591,19 +591,21 @@ function displayProductDetails(id) {
 
 function renderCheckoutPage() {
 	const tbody = document.getElementById("checkout-items");
-
-	if (!tbody) return;
-
 	const items = getCartItems();
 
 	tbody.innerHTML = "";
 
-	let subtotal = 0;
+	let subtotal = 40000;
+	const shippingRadio = document.querySelectorAll("input[name='checkout_shipping']");
+
+	if (shippingRadio.length > 1 && shippingRadio[1].checked) {
+		subtotal = 0;
+	}
 
 	if (items.length === 0) {
 		tbody.innerHTML = `<tr><td colspan="2" style="text-align:center;padding:30px">Không có sản phẩm trong giỏ hàng.</td></tr>`;
-		document.querySelector(".subtotal-row td:last-child").innerHTML = `0đ`;
-		document.querySelector(".total-row td:last-child").innerHTML = `0đ`;
+		document.querySelector(".subtotal-row td:last-child").innerHTML = toStringPrice(0);
+		document.querySelector(".total-row td:last-child").innerHTML = toStringPrice(0);
 		return;
 	}
 
@@ -618,7 +620,6 @@ function renderCheckoutPage() {
 
 function updateCheckoutTotal() {
 	let subtotal = 0;
-
 	const items = getCartItems();
 
 	items.forEach(function(item) {
@@ -628,7 +629,7 @@ function updateCheckoutTotal() {
 	let shipping = 40000;
 	const shippingRadio = document.querySelectorAll("input[name='checkout_shipping']");
 
-	if (shippingRadio.length > 1 && shippingRadio[1].checked) {
+	if (shippingRadio[1].checked) {
 		shipping = 0;
 	}
 

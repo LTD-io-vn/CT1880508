@@ -17,8 +17,9 @@
 			display: flex;
 			justify-content: space-between;
 			gap: 40px;
-			margin-top: 20px;
+			margin: 50px auto;
 			padding: 0 50px;
+			max-width: 1000px;
 		}
 
 		.checkout-content-left {
@@ -201,7 +202,7 @@
 	</header>
 	
 	<main>
-		<div class="cart-container">
+		<div class="cart-progress-container">
 			<div class="cart-progress">
 				<div class="active-step"><i class="fa-solid fa-basket-shopping"></i></div>
 				<div class="active-step"><i class="fa-solid fa-map-location-dot"></i></div>
@@ -209,133 +210,131 @@
 			</div>
 		</div>
 
-		<div class="cart-container">
-			<div class="checkout-content-row">
-				<div class="checkout-content-left">
-					<h3>THÔNG TIN THANH TOÁN</h3>
+		<div class="checkout-content-row">
+			<div class="checkout-content-left">
+				<h3>THÔNG TIN THANH TOÁN</h3>
 
-					<form method="post" onsubmit="return placeOrder();" target="dathang.html" id="checkout-form">
-						<div class="form-col-2">
-							<div class="form-group">
-								<label>Tên *</label>
-								<input class="input" type="text" required>
-							</div>
-		
-							<div class="form-group">
-								<label>Họ *</label>
-								<input class="input" type="text" required>
-							</div>
-						</div>
-		
+				<form method="post" onsubmit="return placeOrder();" target="dathang.html" id="checkout-form">
+					<div class="form-col-2">
 						<div class="form-group">
-							<label>Tên công ty (tuỳ chọn)</label>
-							<input class="input" type="text">
-						</div>
-		
-						<div class="form-group">
-							<label>Quốc gia / Khu vực *</label>
-							<select class="select" required>
-								<option value="VN">Việt Nam</option>
-							</select>
-						</div>
-		
-						<div class="form-group">
-							<label>Địa chỉ *</label>
-		
-							<div class="form-col-2">
-								<input class="input" type="text" placeholder="Địa chỉ" required>
-								<input class="input" type="text" placeholder="Căn hộ, dãy phòng, đơn vị,... (không bắt buộc)">
-							</div>
-						</div>
-		
-						<div class="form-group">
-							<label>Mã bưu điện (tuỳ chọn)</label>
-							<input class="input" type="text">
-						</div>
-		
-						<div class="form-group">
-							<label>Thị trấn / Thành phố *</label>
+							<label>Tên *</label>
 							<input class="input" type="text" required>
 						</div>
-		
+	
 						<div class="form-group">
-							<label>Số điện thoại *</label>
-							<input class="input" type="tel" required>
+							<label>Họ *</label>
+							<input class="input" type="text" required>
 						</div>
-		
-						<div class="form-group">
-							<label>Địa chỉ email *</label>
-							<input class="input" type="email" required>
-						</div>
-		
-						<div class="form-group checkbox-group">
-							<label>
-								<input type="checkbox">
-								Giao hàng đến một địa chỉ khác?
-							</label>
-						</div>
-		
-						<div class="form-group">
-							<label>Ghi chú đơn hàng (tuỳ chọn)</label>
-							<textarea class="input" rows="4" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
-						</div>
-					</form>
-				</div>
-
-				<div class="checkout-content-right">
-					<div class="order-review-box">
-						<h3>ĐƠN HÀNG CỦA BẠN</h3>
-		
-						<table class="order-table">
-							<thead>
-								<tr>
-									<th>SẢN PHẨM</th>
-									<th>TẠM TÍNH</th>
-								</tr>
-							</thead>
-		
-							<tbody id="checkout-items">
-							</tbody>
-		
-							<tfoot>
-								<tr class="subtotal-row">
-									<td>Tạm tính</td>
-									<td>0đ</td>
-								</tr>
-
-								<tr class="shipping-row">
-									<td>Shipment</td>
-									<td>
-										<div class="shipping-options">
-											<label>
-												<input type="radio" name="checkout_shipping" form="checkout-form" checked>
-												Giao hàng tiêu chuẩn: đ40.000
-											</label>
-		
-											<label>
-												<input type="radio" name="checkout_shipping" form="checkout-form">
-												Giao hàng miễn phí
-											</label>
-										</div>
-									</td>
-								</tr>
-		
-								<tr class="total-row">
-									<td>Tổng</td>
-									<td>0đ</td>
-								</tr>
-							</tfoot>
-						</table>
-		
-						<div class="payment-methods">
-							<p><b>Trả tiền mặt khi nhận hàng</b></p>
-							<p class="payment-desc">Trả tiền mặt khi giao hàng</p>
-						</div>
-		
-						<button class="active button" type="submit" form="checkout-form">ĐẶT HÀNG</button>
-
-						<p class="privacy-notice">Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn hàng, hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong <a href="#">chính sách riêng tư</a>.</p>
 					</div>
+	
+					<div class="form-group">
+						<label>Tên công ty (tuỳ chọn)</label>
+						<input class="input" type="text">
+					</div>
+	
+					<div class="form-group">
+						<label>Quốc gia / Khu vực *</label>
+						<select class="select" required>
+							<option value="VN">Việt Nam</option>
+						</select>
+					</div>
+	
+					<div class="form-group">
+						<label>Địa chỉ *</label>
+	
+						<div class="form-col-2">
+							<input class="input" type="text" placeholder="Địa chỉ" required>
+							<input class="input" type="text" placeholder="Căn hộ, dãy phòng, đơn vị,... (không bắt buộc)">
+						</div>
+					</div>
+	
+					<div class="form-group">
+						<label>Mã bưu điện (tuỳ chọn)</label>
+						<input class="input" type="text">
+					</div>
+	
+					<div class="form-group">
+						<label>Thị trấn / Thành phố *</label>
+						<input class="input" type="text" required>
+					</div>
+	
+					<div class="form-group">
+						<label>Số điện thoại *</label>
+						<input class="input" type="tel" required>
+					</div>
+	
+					<div class="form-group">
+						<label>Địa chỉ email *</label>
+						<input class="input" type="email" required>
+					</div>
+	
+					<div class="form-group checkbox-group">
+						<label>
+							<input type="checkbox">
+							Giao hàng đến một địa chỉ khác?
+						</label>
+					</div>
+	
+					<div class="form-group">
+						<label>Ghi chú đơn hàng (tuỳ chọn)</label>
+						<textarea class="input" rows="4" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+					</div>
+				</form>
+			</div>
+
+			<div class="checkout-content-right">
+				<div class="order-review-box">
+					<h3>ĐƠN HÀNG CỦA BẠN</h3>
+	
+					<table class="order-table">
+						<thead>
+							<tr>
+								<th>SẢN PHẨM</th>
+								<th>TẠM TÍNH</th>
+							</tr>
+						</thead>
+	
+						<tbody id="checkout-items">
+						</tbody>
+	
+						<tfoot>
+							<tr class="subtotal-row">
+								<td>Tạm tính</td>
+								<td>0đ</td>
+							</tr>
+
+							<tr class="shipping-row">
+								<td>Shipment</td>
+								<td>
+									<div class="shipping-options">
+										<label>
+											<input type="radio" name="checkout_shipping" form="checkout-form" checked>
+											Giao hàng tiêu chuẩn: đ40.000
+										</label>
+	
+										<label>
+											<input type="radio" name="checkout_shipping" form="checkout-form">
+											Giao hàng miễn phí
+										</label>
+									</div>
+								</td>
+							</tr>
+	
+							<tr class="total-row">
+								<td>Tổng</td>
+								<td>0đ</td>
+							</tr>
+						</tfoot>
+					</table>
+	
+					<div class="payment-methods">
+						<p><b>Trả tiền mặt khi nhận hàng</b></p>
+						<p class="payment-desc">Trả tiền mặt khi giao hàng</p>
+					</div>
+	
+					<button class="active button" type="submit" form="checkout-form">ĐẶT HÀNG</button>
+
+					<p class="privacy-notice">Dữ liệu cá nhân của bạn sẽ được sử dụng để xử lý đơn hàng, hỗ trợ trải nghiệm của bạn trên trang web này và cho các mục đích khác được mô tả trong <a href="#">chính sách riêng tư</a>.</p>
 				</div>
 			</div>
 		</div>
