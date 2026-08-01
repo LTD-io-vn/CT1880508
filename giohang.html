@@ -14,26 +14,32 @@
 
 	<style>
 		.cart-content {
-			margin-top: 20px;
+			margin: 100px auto;
 			padding: 0 50px;
+			max-width: 1000px;
+		}
+
+		.table-container {
+			overflow-x: auto;
 		}
 	
 		.cart-content table {
 			width: 100%;
+			min-width: 700px;
 			border-collapse: collapse;
 		}
 	
 		.cart-content th {
 			padding: 5px 0;
-			border-bottom: 2px solid #eee;
+			border-bottom: 2px solid var(--theme-color-2);
 			font-size: 14px;
 			font-weight: bold;
-			color: #000;
+			color: var(--theme-color-4);
 		}
 	
 		.cart-content td {
 			padding: 5px;
-			border-bottom: 1px solid #eee;
+			border-bottom: 1px solid var(--theme-color-2);
 			vertical-align: middle;
 		}
 
@@ -48,13 +54,13 @@
 			margin: 0;
 			font-size: 14px;
 			line-height: 1.4;
-			color: #333;
+			color: var(--theme-color-4);
 		}
 	
 		.td-price,
 		.td-total {
 			font-size: 14px;
-			color: #000;
+			color: var(--theme-color-4);
 		}
 	
 		.td-price,
@@ -73,40 +79,42 @@
 		.remove-btn {
 			width: 30px;
 			height: 30px;
-			border: 1px solid #ccc;
+			border: 1px solid red;
 			border-radius: 50%;
-			background-color: #fff;
-			color: #ccc;
+			background-color: var(--theme-color-1);
+			color: red;
 			font-size: 10px;
 			cursor: pointer;
+			transition: all 0.2s ease;
 		}
 	
 		.remove-btn:hover {
 			background-color: red;
-			color: #fff;
+			color: var(--theme-color-1);
 			border-color: red;
 		}
 
 		.quantity-group {
 			display: inline-flex;
-			border: 1px solid #ddd;
+			border: 1px solid var(--theme-color-2);
 		}
 	
 		.qty-btn {
-			width: 30px;
-			height: 30px;
+			width: 35px;
+			height: 35px;
 			border: none;
-			background-color: #f9f9f9;
-			font-size: 14px;
+			background-color: var(--theme-color-2);
+			font-size: 12px;
 			cursor: pointer;
 		}
 	
 		.quantity-group input {
-			width: 35px;
-			height: 30px;
+			width: 40px;
+			height: 35px;
+			padding: 0;
 			border: none;
-			border-left: 1px solid #ddd;
-			border-right: 1px solid #ddd;
+			border-left: 1px solid var(--theme-color-2);
+			border-right: 1px solid var(--theme-color-2);
 			text-align: center;
 			outline: none;
 		}
@@ -119,36 +127,26 @@
 
 		.cart-content-button {
 			display: flex;
+			justify-content: flex-end;
 			gap: 15px;
 			margin-top: 25px;
 		}
 	
 		.cart-content-button button {
-			padding: 12px 20px;
+			padding: 15px 25px;
 			font-size: 13px;
 			font-weight: bold;
 			cursor: pointer;
 		}
-	
-		.btn-continue {
-			background-color: #fff;
-			border: 2px solid #000;
-			color: #000;
+
+		.cart-content-button .bordered {
+			border: 1px solid red;
+			color: red;
 		}
-	
-		.btn-continue:hover {
-			background-color: #000;
-			color: #fff;
-		}
-	
-		.btn-update {
-			background-color: #777;
-			border: none;
-			color: #fff;
-		}
-	
-		.btn-update:hover {
-			background-color: #555;
+
+		.cart-content-button .bordered:hover {
+			background-color: red;
+			color: var(--theme-color-1);
 		}
 	</style>
 </head>
@@ -180,23 +178,25 @@
 		</div>
 
 		<div class="cart-content">
-			<table>
-				<thead>
-					<tr>
-						<th colspan="3" style="text-align:left;">SẢN PHẨM</th>
-						<th style="text-align:right;">GIÁ</th>
-						<th style="text-align:center;">SỐ LƯỢNG</th>
-						<th style="text-align:right;">TẠM TÍNH</th>
-					</tr>
-				</thead>
-	
-				<tbody>
-				</tbody>
-			</table>
-	
+			<div class="table-container">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="3" style="text-align:left;">SẢN PHẨM</th>
+							<th style="text-align:right;">GIÁ</th>
+							<th style="text-align:center;">SỐ LƯỢNG</th>
+							<th style="text-align:right;">TẠM TÍNH</th>
+						</tr>
+					</thead>
+			
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+
 			<div class="cart-content-button">
-				<button class="active button">THANH TOÁN</button>
 				<button class="bordered button" onclick="clearAllCart()">XÓA TẤT CẢ</button>
+				<button class="active button" onclick="toCheckout()">THANH TOÁN</button>
 			</div>
 		</div>
 	</main>
