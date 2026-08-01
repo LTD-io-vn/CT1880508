@@ -10,6 +10,164 @@
 	<link rel="icon" href="assets/imgs/favicon.png">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+	<style>
+		main {
+			padding: 25px;
+			display: flex;
+			justify-content: center;
+			gap: 25px;
+		}
+
+		main.info-display #product-info-container {
+			display: flex;
+		}
+
+		main.info-display .separator {
+			display: block;
+		}
+
+		.separator {
+			display: none;
+			width: 1px;
+			background-color: var(--theme-color-3);
+		}
+
+		#product-list-container {
+			display: flex;
+		}
+
+		#product-list-container,
+		#product-info-container {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		#product-list-container {
+			width: 1000px;
+		}
+
+		#product-info-container {
+			display: none;
+			max-width: 350px;
+		}
+
+		#product-info-container h3,
+		#product-info-container p {
+			margin: 0;
+		}
+
+		#product-info-image {
+			width: 100%;
+		}
+
+		.product-search {
+			display: flex;
+			gap: 10px;
+		}
+
+		.product-search input {
+			flex: 1;
+		}
+
+		.action-container {
+			margin-top: 15px;
+			display: flex;
+			gap: 10px;
+		}
+
+		.action-container button {
+			flex: 1;
+		}
+
+		#product-filter {
+			background-color: var(--theme-color-2);
+			padding: 15px;
+			border-radius: 5px;
+		}
+
+		#product-filter h2 {
+			margin: 0;
+		}
+
+		#product-filter select {
+			width: 100%;
+			border: 10px solid transparent;
+			outline: 1px solid var(--theme-color-3);
+			border-radius: 5px;
+		}
+
+		#type-filter div {
+			display: flex;
+			gap: 5px;
+			align-items: center;
+		}
+
+		#type-filter input {
+			width: 20px;
+			height: 20px;
+		}
+
+		#product-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		#product-list div {
+			display: flex;
+			flex-direction: column;
+			width: 175px;
+			padding-bottom: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.25);
+			transition: box-shadow 0.25s ease;
+		}
+
+		#product-list div:hover {
+			box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.75);
+		}
+
+		#product-list img {
+			width: 100%;
+			border-radius: 5px;
+		}
+
+		#product-list h4,
+		#product-list h5,
+		#product-list p {
+			margin: 0 15px;
+		}
+
+		#product-list h5 {
+			margin-top: auto;
+		}
+
+		#product-list p,
+		#product-info-type {
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+
+		#product-info-price {
+			margin: 5px 0;
+		}
+
+		@media (max-width: 1100px) {
+			main.info-display {
+				align-items: center;
+			}
+
+			main.info-display .separator {
+				display: none;
+			}
+
+			main.info-display #product-list-container {
+				display: none;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -30,7 +188,50 @@
 	</header>
 	
 	<main>
+		<form id="product-list-container">
+			<div class="product-search">
+				<button id="product-filter-toggle" class="button" type="button"><i class="fa-solid fa-filter"></i></button>
+				<input id="search-box" class="input" name="search" type="text" placeholder="Tìm kiếm sản phẩm">
+			</div>
 
+			<div id="product-filter" style="display: none;">
+				<h2>Bộ lọc</h2>
+
+				<div id="type-filter">
+					<p>Loại sản phẩm</p>
+				</div>
+
+				<div>
+					<p>Sắp xếp theo</p>
+					<select id="filter-sort" name="sort">
+						<option value="type">Loại</option>
+						<option value="name">Tên</option>
+						<option value="price-down">Giá từ cao đến thấp</option>
+						<option value="price-up">Giá từ thấp đến cao</option>
+					</select>
+				</div>
+
+				<div class="action-container">
+					<button class="active button" type="submit"><i class="fa-solid fa-filter"></i> Áp dụng</button>
+					<button class="bordered button" type="reset"><i class="fa-solid fa-rotate-left"></i> Đặt lại</button>
+				</div>
+			</div>
+
+			<div id="product-list"></div>
+		</form>
+
+		<div class="separator"></div>
+
+		<div id="product-info-container">
+			<button class="button" onclick="displayProductDetails(null);"><i class="fa-solid fa-chevron-left"></i> Trở lại</button>
+			<img id="product-info-image" />
+			<h3 id="product-info-title"></h3>
+			<p id="product-info-type"></p>
+			<p id="product-info-description"></p>
+			<h4 id="product-info-price"></h4>
+			<input id="product-info-amount" class="input" type="number" min="1" max="100" value="1" placeholder="Nhập số lượng (1 - 100)" />
+			<button id="product-info-add-to-cart" class="active button"><i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ hàng</button>
+		</div>
 	</main>
 
 	<footer>
@@ -73,6 +274,7 @@
 	</footer>
 
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/products.js"></script>
 </body>
 
 </html>

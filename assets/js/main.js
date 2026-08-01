@@ -553,7 +553,7 @@ function onRegisterSubmit() {
 		passwordInput.focus();
 		return false;
 	}
-	
+
 	if (password !== confirmPassInput.value) {
 		alert("Mật khẩu xác nhận không trùng khớp!");
 		confirmPassInput.focus();
@@ -563,12 +563,34 @@ function onRegisterSubmit() {
 	return true;
 }
 
+let selectedProductId;
+
+function displayProductDetails(id) {
+	selectedProductId = id;
+
+	const mainElement = document.querySelector("main");
+
+	if (id == null) {
+		mainElement.classList.remove("info-display");
+	} else {
+		const data = productData[id];
+		document.getElementById("product-info-image").src = data.image;
+		document.getElementById("product-info-title").textContent = `${data.origin}: ${data.name}`;
+		document.getElementById("product-info-type").textContent = `Loại sản phẩm: ${data.type}`;
+		document.getElementById("product-info-description").textContent = data.description;
+		document.getElementById("product-info-price").textContent = `Giá: ${data.price.toLocaleString(undefined, { style: "currency", currency: "VND" })} / sản phẩm`;
+		document.getElementById("product-info-amount").value = 1;
+		mainElement.classList.add("info-display");
+		window.scrollTo(0, 0);
+	}
+}
+
 let navToggleState = false;
 
 const navToggle = document.getElementById("nav-toggle");
 const navBar = document.getElementById("nav-bar");
 
-navToggle.addEventListener("click", function() {
+navToggle.addEventListener("click", function () {
 	navToggleState = !navToggleState;
 	if (navToggleState) {
 		navBar.classList.add("visible");
