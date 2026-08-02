@@ -595,12 +595,7 @@ function renderCheckoutPage() {
 
 	tbody.innerHTML = "";
 
-	let subtotal = 40000;
-	const shippingRadio = document.querySelectorAll("input[name='checkout_shipping']");
-
-	if (shippingRadio.length > 1 && shippingRadio[1].checked) {
-		subtotal = 0;
-	}
+	let subtotal = 0;
 
 	if (items.length === 0) {
 		tbody.innerHTML = `<tr><td colspan="2" style="text-align:center;padding:30px">Không có sản phẩm trong giỏ hàng.</td></tr>`;
