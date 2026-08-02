@@ -29,7 +29,7 @@ document.getElementById("filter-sort").value = filterSort;
 const entries = Object.entries(productData);
 
 if (filterSort != "type") {
-	entries.sort((a, b) => {
+	entries.sort(function(a, b) {
 		if (filterSort == "price-up") {
 			return a[1].price - b[1].price;
 		}
@@ -56,7 +56,11 @@ for (const [id, data] of entries) {
 		if (!searchText || data.name.toLowerCase().includes(searchText) || data.origin.toLowerCase().includes(searchText)) {
 			const div = document.createElement("div");
 			div.innerHTML = `<img src="${data.image}"><h4>${data.name}</h4><p>${data.origin}</p><h5>${toStringPrice(data.price)}</h5>`;
-			div.onclick = () => displayProductDetails(id);
+			
+			div.addEventListener("click", function() {
+				displayProductDetails(id);
+			});
+
 			productContainer.appendChild(div);
 		}
 	}
