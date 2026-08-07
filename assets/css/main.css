@@ -1,22 +1,15 @@
-:root {
-	--theme-color-1: rgb(255, 255, 255);
-	--theme-color-2: rgb(225, 225, 225);
-	--theme-color-3: rgb(150, 150, 150);
-	--theme-color-4: rgb(50, 50, 50);
-}
-
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	background-color: var(--theme-color-1);
-	color: var(--theme-color-4);
+	background-color: white;
+	color: rgb(50, 50, 50);
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 
 header {
-	background-color: var(--theme-color-1);
+	background-color: white;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -44,13 +37,13 @@ header li {
 
 header a {
 	text-decoration: none;
-	color: var(--theme-color-4);
+	color: rgb(50, 50, 50);
 	font-weight: bold;
 	transition: color 0.2s ease;
 }
 
 header a:hover {
-	color: var(--theme-color-3);
+	color: rgb(150, 150, 150);
 }
 
 main {
@@ -63,8 +56,8 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	gap: 25px;
-	background-color: var(--theme-color-4);
-	color: var(--theme-color-1);
+	background-color: rgb(50, 50, 50);
+	color: white;
 	padding: 50px 25px 25px 25px;
 }
 
@@ -87,7 +80,7 @@ footer button {
 
 footer button:hover {
 	background-color: rgb(0, 200, 0);
-	color: var(--theme-color-1);
+	color: white;
 	transform: translate(0, -5px);
 }
 
@@ -122,7 +115,7 @@ footer button:hover {
 }
 
 .footer-info-container ul a {
-	color: var(--theme-color-1);
+	color: white;
 	text-decoration: none;
 	font-weight: bold;
 	transition: color 0.2s ease;
@@ -131,11 +124,11 @@ footer button:hover {
 .footer-info-container ul li:not(:last-child) {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid var(--theme-color-3);
+	border-bottom: 1px solid rgb(150, 150, 150);
 }
 
 .footer-info-container ul a:hover {
-	color: var(--theme-color-3);
+	color: rgb(150, 150, 150);
 }
 
 @media (max-width: 500px) {
@@ -182,7 +175,7 @@ footer button:hover {
 		height: 100%;
 		width: 250px;
 		padding: 75px 25px;
-		background-color: var(--theme-color-1);
+		background-color: white;
 	}
 
 	#nav-bar i {
@@ -207,7 +200,7 @@ footer button:hover {
 .button {
 	padding: 10px 20px;
 	border: none;
-	color: var(--theme-color-4);
+	color: rgb(50, 50, 50);
 	background-color: transparent;
 	border-radius: 5px;
 	font-weight: bold;
@@ -219,44 +212,44 @@ footer button:hover {
 }
 
 .button.active {
-	color: var(--theme-color-1);
-	background-color: var(--theme-color-4);
+	color: white;
+	background-color: rgb(50, 50, 50);
 }
 
 .button.active:hover {
-	background-color: var(--theme-color-3);
+	background-color: rgb(150, 150, 150);
 }
 
 .button.light {
-	background-color: var(--theme-color-1);
+	background-color: white;
 }
 
 .button.light:hover {
-	background-color: var(--theme-color-2);
+	background-color: rgb(225, 225, 225);
 }
 
 .button.bordered {
-	border: 1px solid var(--theme-color-4);
+	border: 1px solid rgb(50, 50, 50);
 }
 
 .button.bordered:hover {
-	background-color: var(--theme-color-4);
-	color: var(--theme-color-1);
+	background-color: rgb(50, 50, 50);
+	color: white;
 }
 
 .input {
 	border-radius: 5px;
-	border: 1px solid var(--theme-color-3);
+	border: 1px solid rgb(150, 150, 150);
 	padding: 10px;
 	outline: none;
 }
 
 .input:focus {
-	border: 1px solid #000;
+	border: 1px solid black;
 }
 
 .select {
 	border: 10px solid transparent;
-	outline: 1px solid var(--theme-color-3);
+	outline: 1px solid rgb(150, 150, 150);
 	border-radius: 5px;
 }

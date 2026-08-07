@@ -16,7 +16,7 @@ main {
 	align-items: center;
 	width: 50%;
 	height: 2px;
-	background-color: var(--theme-color-3);
+	background-color: rgb(150, 150, 150);
 }
 
 .cart-progress div {
@@ -25,10 +25,10 @@ main {
 	align-items: center;
 	width: 40px;
 	height: 40px;
-	border: 1px solid var(--theme-color-3);
+	border: 1px solid rgb(150, 150, 150);
 	border-radius: 50%;
-	background-color: var(--theme-color-1);
-	color: var(--theme-color-3);
+	background-color: white;
+	color: rgb(150, 150, 150);
 }
 
 .cart-progress .active-step {
@@ -37,5 +37,5 @@ main {
 }
 
 .cart-progress .active-step i {
-	color: var(--theme-color-1);
+	color: white;
 }
