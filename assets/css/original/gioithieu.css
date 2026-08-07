@@ -1,0 +1,16 @@
+main h1 {
+	text-align: center;
+}
+
+main {
+	margin: auto;
+}
+
+main section {
+	margin-top: 50px;
+	max-width: 900px;
+}
+
+main section p {
+	text-align: justify;
+}

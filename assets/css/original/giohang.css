@@ -1,0 +1,141 @@
+.cart-content {
+	margin: 100px auto;
+	padding: 0 50px;
+	max-width: 1000px;
+}
+
+.table-container {
+	overflow-x: auto;
+}
+
+.cart-content table {
+	width: 100%;
+	min-width: 700px;
+	border-collapse: collapse;
+}
+
+.cart-content th {
+	padding: 5px 0;
+	border-bottom: 2px solid rgb(225, 225, 225);
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(50, 50, 50);
+}
+
+.cart-content td {
+	padding: 5px;
+	border-bottom: 1px solid rgb(225, 225, 225);
+	vertical-align: middle;
+}
+
+.td-img img {
+	display: block;
+	width: 70px;
+	height: auto;
+	margin: 0 15px;
+}
+
+.td-name p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.4;
+	color: rgb(50, 50, 50);
+}
+
+.td-price,
+.td-total {
+	font-size: 14px;
+	color: rgb(50, 50, 50);
+}
+
+.td-price,
+.td-total {
+	text-align: right;
+}
+
+.td-total {
+	font-weight: bold;
+}
+
+.td-quantity {
+	text-align: center;
+}
+
+.remove-btn {
+	width: 30px;
+	height: 30px;
+	border: 1px solid red;
+	border-radius: 50%;
+	background-color: white;
+	color: red;
+	font-size: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+	background-color: red;
+	color: white;
+	border-color: red;
+}
+
+.quantity-group {
+	display: inline-flex;
+	border: 1px solid rgb(225, 225, 225);
+}
+
+.qty-btn {
+	width: 35px;
+	height: 35px;
+	border: none;
+	background-color: rgb(225, 225, 225);
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.quantity-group input {
+	width: 40px;
+	height: 35px;
+	padding: 0;
+	border: none;
+	border-left: 1px solid rgb(225, 225, 225);
+	border-right: 1px solid rgb(225, 225, 225);
+	text-align: center;
+	outline: none;
+}
+
+.quantity-group input::-webkit-outer-spin-button,
+.quantity-group input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.cart-content-button {
+	display: flex;
+	justify-content: flex-end;
+	gap: 15px;
+	margin-top: 25px;
+}
+
+.cart-content-button button {
+	padding: 15px 25px;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.cart-content-button .bordered {
+	border: 1px solid red;
+	color: red;
+}
+
+.cart-content-button .bordered:hover {
+	background-color: red;
+	color: white;
+}
+
+@media (max-width: 650px) {
+	.cart-content-button button {
+		flex: 1;
+	}
+}
