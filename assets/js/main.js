@@ -438,6 +438,51 @@ const productData = {
 		price: 2590000,
 		image: "assets/imgs/sanpham/cassette-player.jpg",
 		type: "Máy nghe cassette"
+	},
+
+	SP0055: {
+		name: "WH-CH520",
+		origin: "Sony",
+		description: "Tai nghe không dây Bluetooth với thời lượng pin lên đến 50 giờ, âm thanh cân bằng và thiết kế nhẹ.",
+		price: 1490000,
+		image: "assets/imgs/sanpham/headphone.jpg",
+		type: "Tai nghe"
+	},
+	
+	SP0056: {
+		name: "Tune 720BT",
+		origin: "JBL",
+		description: "Tai nghe Bluetooth sở hữu công nghệ JBL Pure Bass, kết nối đa điểm và thời lượng pin dài.",
+		price: 1990000,
+		image: "assets/imgs/sanpham/headphone.jpg",
+		type: "Tai nghe"
+	},
+	
+	SP0057: {
+		name: "ATH-M20x",
+		origin: "Audio-Technica",
+		description: "Tai nghe kiểm âm chuyên nghiệp với âm thanh trung thực, phù hợp cho thu âm và nghe nhạc chất lượng cao.",
+		price: 1790000,
+		image: "assets/imgs/sanpham/headphone.jpg",
+		type: "Tai nghe"
+	},
+	
+	SP0058: {
+		name: "HD 400S",
+		origin: "Sennheiser",
+		description: "Tai nghe có dây với thiết kế gọn nhẹ, âm thanh chi tiết và micro tích hợp để đàm thoại.",
+		price: 1290000,
+		image: "assets/imgs/sanpham/headphone.jpg",
+		type: "Tai nghe"
+	},
+	
+	SP0059: {
+		name: "Life Q20",
+		origin: "Soundcore",
+		description: "Tai nghe chống ồn chủ động (ANC), hỗ trợ Hi-Res Audio và thời lượng pin lên đến 40 giờ.",
+		price: 1590000,
+		image: "assets/imgs/sanpham/headphone.jpg",
+		type: "Tai nghe"
 	}
 };
 
